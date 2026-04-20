@@ -1,0 +1,376 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Version="29" AppVersion="5.9.8.17" ReadKey="readkey.JE8B29jCeak=.A4Dky6a1qCv1M9BQdyht6g==.f5h95FrOB1RKGQqytkHBTZEKyLRIBjuNNjCNZTHyxesxTUNpXGkImzO5eAwWlVzgUkqYN4PQdnz4SgLyt2y7c7mZqvQzi8/v7e6aENGnStw=.kaFE6dMD2yLYpgNWLSWi9NU0jTnmdzKksgexTAL0O84=." WriteKeyPublic="BgIAAACkAABSU0ExAAgAAAEAAQBR8GGntmJfcOWaaBKn4xfol2vP7I4dd96bg7+ROEjanJNZzFwjj4Yg444vHrL3ZzbWe0TW9dP2AEKUFqn5HQRj7UVtk8a2NSX8Ci3SYyix1e2Fy5uixEeYucITFw4VDPC0pQzte+ECmwIK6TtbqxankAZh9t7bxCQspWc2QPX5OUDrqB79lyuktejB2jfysyZmXlt/W+T+zCX14sls221fbU8lQOhkhGNBOoRnXGKdQ+vTKsRxv6pXI9JIaKT60nMObZ0N48QRdfcw2H/z9quf2Bkc+4TVBVLFcNMO4HByRzAhw7raBR43bIfiB4PItwE3mPwqxGsKO+EMmL7NbQTE" StartModuleName="Main" DocumentationTableOrder="ByExecutionOrder" EditedBy="A\axelb" LastEdited="2026-04-20T04:12:07.1987101Z" ComplexityLevel="Beginner" Signature="ZVgQBlceV45htxQ7XfkMIwN8016qECERlR0+dbM19WQ=">
+  <Modules>
+    <Module Name="Main" AutoRun="true" SelectedGroupName="Group 1">
+      <Groups>
+        <Group Name="Group 1">
+          <Tables>
+            <Table Name="Imported table 1" Left="685" Top="99" Width="500" Height="300" IsMinimized="false" ActiveActionIndex="1" ViewMode="Table">
+              <Actions>
+                <ImportSqlAction AutoStatus="true" QueryLocationType="VisualEditor">
+                  <MetaColumns>
+                    <MetaColumn OriginalName="fecha" />
+                  </MetaColumns>
+                  <Query Version="7" AppVersion="5.9.8.17" QueryType="QueryBuilder" UseEmbeddedParameters="false" WindowWidth="1070" WindowHeight="600" QueryBuilderObjectsAreaWidth="255" QueryBuilderFiltersAreaHeight="250">
+                    <DataConnectorDefinition IsShared="true" Type="List" Name="ProyectoBI" />
+                    <QueryModel WhereConditionType="ConditionBuilder" HavingConditionType="ConditionBuilder" SelectAllRows="true" UseDistinct="false" AutoPreview="true" PreviewRows="100" PreFilterColumnValues="true">
+                      <TableName Value="public.cita" Type="List" />
+                      <SelectItems>
+                        <SqlSelectItem Type="Column" Name="id_cita" ColumnType="Number" />
+                        <SqlSelectItem Type="Column" Name="fecha" ColumnType="Date" />
+                        <SqlSelectItem Type="Column" Name="hora_programada" ColumnType="Other" />
+                        <SqlSelectItem Type="Column" Name="id_paciente" ColumnType="Number" />
+                        <SqlSelectItem Type="Column" Name="id_medico" ColumnType="Number" />
+                        <SqlSelectItem Type="Column" Name="id_sede" ColumnType="Number" />
+                        <SqlSelectItem Type="Column" Name="id_servicio" ColumnType="Number" />
+                        <SqlSelectItem Type="Column" Name="id_estado" ColumnType="Number" />
+                        <SqlSelectItem Type="Column" Name="id_franja" ColumnType="Number" />
+                        <SqlSelectItem Type="Column" Name="id_cita_origen" ColumnType="Number" />
+                        <SqlSelectItem Type="Column" Name="observaciones" ColumnType="Text" />
+                      </SelectItems>
+                      <Expressions />
+                      <WhereConditionTree />
+                      <HavingConditionTree />
+                      <KnownDataTypes>
+                        <Item Name="id_cita" IsExpression="false" DataType="Number" />
+                        <Item Name="fecha" IsExpression="false" DataType="Date" />
+                        <Item Name="hora_programada" IsExpression="false" DataType="Other" />
+                        <Item Name="id_paciente" IsExpression="false" DataType="Number" />
+                        <Item Name="id_medico" IsExpression="false" DataType="Number" />
+                        <Item Name="id_sede" IsExpression="false" DataType="Number" />
+                        <Item Name="id_servicio" IsExpression="false" DataType="Number" />
+                        <Item Name="id_estado" IsExpression="false" DataType="Number" />
+                        <Item Name="id_franja" IsExpression="false" DataType="Number" />
+                        <Item Name="id_cita_origen" IsExpression="false" DataType="Number" />
+                        <Item Name="observaciones" IsExpression="false" DataType="Text" />
+                      </KnownDataTypes>
+                    </QueryModel>
+                    <Parameters />
+                  </Query>
+                </ImportSqlAction>
+                <ExportDatasetAction AutoStatus="true" Mode="Local" FileExistsOption="Overwrite" EncryptColumns="false" AppendMode="AddNewColumns" ExportMode="CreateOrOverwrite">
+                  <FileName Value="stg_cita_raw.dset" Type="Path" />
+                </ExportDatasetAction>
+              </Actions>
+              <AnalysisView Version="2" AppVersion="5.9.8.17" LayoutMode="Filters" />
+            </Table>
+            <Table Name="public.aseguradora 1" Left="124" Top="52" Width="500" Height="300" IsMinimized="false" ActiveActionIndex="1" ViewMode="Table">
+              <Actions>
+                <ImportSqlAction QueryLocationType="VisualEditor">
+                  <Query Version="7" AppVersion="5.9.8.17" QueryType="QueryBuilder" UseEmbeddedParameters="false" WindowWidth="1070" WindowHeight="600" QueryBuilderObjectsAreaWidth="255" QueryBuilderFiltersAreaHeight="250">
+                    <DataConnectorDefinition IsShared="true" Type="List" Name="ProyectoBI" />
+                    <QueryModel WhereConditionType="ConditionBuilder" HavingConditionType="ConditionBuilder" SelectAllRows="true" UseDistinct="false" AutoPreview="true" PreviewRows="100" PreFilterColumnValues="true">
+                      <TableName Value="public.aseguradora" Type="List" />
+                      <SelectItems>
+                        <SqlSelectItem Type="Column" Name="id_aseguradora" ColumnType="Number" />
+                        <SqlSelectItem Type="Column" Name="nombre" ColumnType="Text" />
+                        <SqlSelectItem Type="Column" Name="tipo_cobertura" ColumnType="Text" />
+                        <SqlSelectItem Type="Column" Name="origen" ColumnType="Text" />
+                      </SelectItems>
+                      <Expressions />
+                      <WhereConditionTree />
+                      <HavingConditionTree />
+                      <KnownDataTypes>
+                        <Item Name="id_aseguradora" IsExpression="false" DataType="Number" />
+                        <Item Name="nombre" IsExpression="false" DataType="Text" />
+                        <Item Name="tipo_cobertura" IsExpression="false" DataType="Text" />
+                        <Item Name="origen" IsExpression="false" DataType="Text" />
+                      </KnownDataTypes>
+                    </QueryModel>
+                    <Parameters />
+                  </Query>
+                </ImportSqlAction>
+                <ExportDatasetAction AutoStatus="true" Mode="Local" FileExistsOption="Overwrite" EncryptColumns="false" AppendMode="AddNewColumns" ExportMode="CreateOrOverwrite">
+                  <FileName Value="stg_aseguradora_raw.dset" Type="Path" />
+                </ExportDatasetAction>
+              </Actions>
+              <AnalysisView Version="2" AppVersion="5.9.8.17" LayoutMode="Filters" />
+            </Table>
+            <Table Name="public.detalle_factura 1" Left="61" Top="288" Width="496" Height="300" IsMinimized="false" ActiveActionIndex="1" ViewMode="Table">
+              <Actions>
+                <ImportSqlAction QueryLocationType="VisualEditor">
+                  <Query Version="7" AppVersion="5.9.8.17" QueryType="QueryBuilder" UseEmbeddedParameters="false" WindowWidth="1070" WindowHeight="600" QueryBuilderObjectsAreaWidth="255" QueryBuilderFiltersAreaHeight="250">
+                    <DataConnectorDefinition IsShared="true" Type="List" Name="ProyectoBI" />
+                    <QueryModel WhereConditionType="ConditionBuilder" HavingConditionType="ConditionBuilder" SelectAllRows="true" UseDistinct="false" AutoPreview="true" PreviewRows="100" PreFilterColumnValues="true">
+                      <TableName Value="public.detalle_factura" Type="List" />
+                      <SelectItems>
+                        <SqlSelectItem Type="Column" Name="id_detalle_factura" ColumnType="Number" />
+                        <SqlSelectItem Type="Column" Name="id_factura" ColumnType="Number" />
+                        <SqlSelectItem Type="Column" Name="id_procedimiento" ColumnType="Number" />
+                        <SqlSelectItem Type="Column" Name="id_cita" ColumnType="Number" />
+                        <SqlSelectItem Type="Column" Name="id_servicio" ColumnType="Number" />
+                        <SqlSelectItem Type="Column" Name="cantidad" ColumnType="Number" />
+                        <SqlSelectItem Type="Column" Name="precio_unitario" ColumnType="Number" />
+                        <SqlSelectItem Type="Column" Name="subtotal_linea" ColumnType="Number" />
+                      </SelectItems>
+                      <Expressions />
+                      <WhereConditionTree />
+                      <HavingConditionTree />
+                      <KnownDataTypes>
+                        <Item Name="id_detalle_factura" IsExpression="false" DataType="Number" />
+                        <Item Name="id_factura" IsExpression="false" DataType="Number" />
+                        <Item Name="id_procedimiento" IsExpression="false" DataType="Number" />
+                        <Item Name="id_cita" IsExpression="false" DataType="Number" />
+                        <Item Name="id_servicio" IsExpression="false" DataType="Number" />
+                        <Item Name="cantidad" IsExpression="false" DataType="Number" />
+                        <Item Name="precio_unitario" IsExpression="false" DataType="Number" />
+                        <Item Name="subtotal_linea" IsExpression="false" DataType="Number" />
+                      </KnownDataTypes>
+                    </QueryModel>
+                    <Parameters />
+                  </Query>
+                </ImportSqlAction>
+                <ExportDatasetAction AutoStatus="true" Mode="Local" FileExistsOption="Overwrite" EncryptColumns="false" AppendMode="AddNewColumns" ExportMode="CreateOrOverwrite">
+                  <FileName Value="stg_detalle_factura_raw.dset" Type="Path" />
+                </ExportDatasetAction>
+              </Actions>
+              <AnalysisView Version="2" AppVersion="5.9.8.17" LayoutMode="Filters" />
+            </Table>
+            <Table Name="public.especialidad 1" Left="199" Top="577" Width="500" Height="300" IsMinimized="false" ActiveActionIndex="1" ViewMode="Table">
+              <Actions>
+                <ImportSqlAction QueryLocationType="VisualEditor">
+                  <Query Version="7" AppVersion="5.9.8.17" QueryType="QueryBuilder" UseEmbeddedParameters="false" WindowWidth="1070" WindowHeight="600" QueryBuilderObjectsAreaWidth="255" QueryBuilderFiltersAreaHeight="250">
+                    <DataConnectorDefinition IsShared="true" Type="List" Name="ProyectoBI" />
+                    <QueryModel WhereConditionType="ConditionBuilder" HavingConditionType="ConditionBuilder" SelectAllRows="true" UseDistinct="false" AutoPreview="true" PreviewRows="100" PreFilterColumnValues="true">
+                      <TableName Value="public.especialidad" Type="List" />
+                      <SelectItems>
+                        <SqlSelectItem Type="Column" Name="id_especialidad" ColumnType="Number" />
+                        <SqlSelectItem Type="Column" Name="nombre" ColumnType="Text" />
+                        <SqlSelectItem Type="Column" Name="area_clinica" ColumnType="Text" />
+                      </SelectItems>
+                      <Expressions />
+                      <WhereConditionTree />
+                      <HavingConditionTree />
+                      <KnownDataTypes>
+                        <Item Name="id_especialidad" IsExpression="false" DataType="Number" />
+                        <Item Name="nombre" IsExpression="false" DataType="Text" />
+                        <Item Name="area_clinica" IsExpression="false" DataType="Text" />
+                      </KnownDataTypes>
+                    </QueryModel>
+                    <Parameters />
+                  </Query>
+                </ImportSqlAction>
+                <ExportDatasetAction AutoStatus="true" Mode="Local" FileExistsOption="Overwrite" EncryptColumns="false" AppendMode="AddNewColumns" ExportMode="CreateOrOverwrite">
+                  <FileName Value="stg_especialidad_raw" Type="Path" />
+                </ExportDatasetAction>
+              </Actions>
+              <AnalysisView Version="2" AppVersion="5.9.8.17" LayoutMode="Filters" />
+            </Table>
+            <Table Name="public.estado_cita 1" Left="934" Top="66" Width="500" Height="295" IsMinimized="false" ActiveActionIndex="1" ViewMode="Table">
+              <Actions>
+                <ImportSqlAction QueryLocationType="VisualEditor">
+                  <Query Version="7" AppVersion="5.9.8.17" QueryType="QueryBuilder" UseEmbeddedParameters="false" WindowWidth="1070" WindowHeight="600" QueryBuilderObjectsAreaWidth="255" QueryBuilderFiltersAreaHeight="250">
+                    <DataConnectorDefinition IsShared="true" Type="List" Name="ProyectoBI" />
+                    <QueryModel WhereConditionType="ConditionBuilder" HavingConditionType="ConditionBuilder" SelectAllRows="true" UseDistinct="false" AutoPreview="true" PreviewRows="100" PreFilterColumnValues="true">
+                      <TableName Value="public.estado_cita" Type="List" />
+                      <SelectItems>
+                        <SqlSelectItem Type="Column" Name="id_estado" ColumnType="Number" />
+                        <SqlSelectItem Type="Column" Name="descripcion" ColumnType="Text" />
+                      </SelectItems>
+                      <Expressions />
+                      <WhereConditionTree />
+                      <HavingConditionTree />
+                      <KnownDataTypes>
+                        <Item Name="id_estado" IsExpression="false" DataType="Number" />
+                        <Item Name="descripcion" IsExpression="false" DataType="Text" />
+                      </KnownDataTypes>
+                    </QueryModel>
+                    <Parameters />
+                  </Query>
+                </ImportSqlAction>
+                <ExportDatasetAction AutoStatus="true" Mode="Local" FileExistsOption="Overwrite" EncryptColumns="false" AppendMode="AddNewColumns" ExportMode="CreateOrOverwrite">
+                  <FileName Value="stg_estado_cita_raw" Type="Path" />
+                </ExportDatasetAction>
+              </Actions>
+              <AnalysisView Version="2" AppVersion="5.9.8.17" LayoutMode="Filters" />
+            </Table>
+            <Table Name="public.factura 1" Left="138" Top="185" Width="500" Height="300" IsMinimized="false" ActiveActionIndex="1" ViewMode="Table">
+              <Actions>
+                <ImportSqlAction QueryLocationType="VisualEditor">
+                  <MetaColumns>
+                    <MetaColumn OriginalName="fecha" />
+                  </MetaColumns>
+                  <Query Version="7" AppVersion="5.9.8.17" QueryType="QueryBuilder" UseEmbeddedParameters="false" WindowWidth="1070" WindowHeight="600" QueryBuilderObjectsAreaWidth="255" QueryBuilderFiltersAreaHeight="250">
+                    <DataConnectorDefinition IsShared="true" Type="List" Name="ProyectoBI" />
+                    <QueryModel WhereConditionType="ConditionBuilder" HavingConditionType="ConditionBuilder" SelectAllRows="true" UseDistinct="false" AutoPreview="true" PreviewRows="100" PreFilterColumnValues="true">
+                      <TableName Value="public.factura" Type="List" />
+                      <SelectItems>
+                        <SqlSelectItem Type="Column" Name="id_factura" ColumnType="Number" />
+                        <SqlSelectItem Type="Column" Name="numero_factura" ColumnType="Text" />
+                        <SqlSelectItem Type="Column" Name="fecha" ColumnType="Date" />
+                        <SqlSelectItem Type="Column" Name="id_paciente" ColumnType="Number" />
+                        <SqlSelectItem Type="Column" Name="id_aseguradora" ColumnType="Number" />
+                        <SqlSelectItem Type="Column" Name="id_forma_pago" ColumnType="Number" />
+                        <SqlSelectItem Type="Column" Name="subtotal" ColumnType="Number" />
+                        <SqlSelectItem Type="Column" Name="impuesto" ColumnType="Number" />
+                        <SqlSelectItem Type="Column" Name="total" ColumnType="Number" />
+                      </SelectItems>
+                      <Expressions />
+                      <WhereConditionTree />
+                      <HavingConditionTree />
+                      <KnownDataTypes>
+                        <Item Name="id_factura" IsExpression="false" DataType="Number" />
+                        <Item Name="numero_factura" IsExpression="false" DataType="Text" />
+                        <Item Name="fecha" IsExpression="false" DataType="Date" />
+                        <Item Name="id_paciente" IsExpression="false" DataType="Number" />
+                        <Item Name="id_aseguradora" IsExpression="false" DataType="Number" />
+                        <Item Name="id_forma_pago" IsExpression="false" DataType="Number" />
+                        <Item Name="subtotal" IsExpression="false" DataType="Number" />
+                        <Item Name="impuesto" IsExpression="false" DataType="Number" />
+                        <Item Name="total" IsExpression="false" DataType="Number" />
+                      </KnownDataTypes>
+                    </QueryModel>
+                    <Parameters />
+                  </Query>
+                </ImportSqlAction>
+                <ExportDatasetAction AutoStatus="true" Mode="Local" FileExistsOption="Overwrite" EncryptColumns="false" AppendMode="AddNewColumns" ExportMode="CreateOrOverwrite">
+                  <FileName Value="stg_factura_raw" Type="Path" />
+                </ExportDatasetAction>
+              </Actions>
+              <AnalysisView Version="2" AppVersion="5.9.8.17" LayoutMode="Filters" />
+            </Table>
+            <Table Name="public.forma_pago 1" Left="390" Top="223" Width="500" Height="300" IsMinimized="false" ActiveActionIndex="1" ViewMode="Table">
+              <Actions>
+                <ImportSqlAction QueryLocationType="VisualEditor">
+                  <Query Version="7" AppVersion="5.9.8.17" QueryType="QueryBuilder" UseEmbeddedParameters="false" WindowWidth="1070" WindowHeight="600" QueryBuilderObjectsAreaWidth="255" QueryBuilderFiltersAreaHeight="250">
+                    <DataConnectorDefinition IsShared="true" Type="List" Name="ProyectoBI" />
+                    <QueryModel WhereConditionType="ConditionBuilder" HavingConditionType="ConditionBuilder" SelectAllRows="true" UseDistinct="false" AutoPreview="true" PreviewRows="100" PreFilterColumnValues="true">
+                      <TableName Value="public.forma_pago" Type="List" />
+                      <SelectItems>
+                        <SqlSelectItem Type="Column" Name="id_forma_pago" ColumnType="Number" />
+                        <SqlSelectItem Type="Column" Name="descripcion" ColumnType="Text" />
+                      </SelectItems>
+                      <Expressions />
+                      <WhereConditionTree />
+                      <HavingConditionTree />
+                      <KnownDataTypes>
+                        <Item Name="id_forma_pago" IsExpression="false" DataType="Number" />
+                        <Item Name="descripcion" IsExpression="false" DataType="Text" />
+                      </KnownDataTypes>
+                    </QueryModel>
+                    <Parameters />
+                  </Query>
+                </ImportSqlAction>
+                <ExportDatasetAction AutoStatus="true" Mode="Local" FileExistsOption="Overwrite" EncryptColumns="false" AppendMode="AddNewColumns" ExportMode="CreateOrOverwrite">
+                  <FileName Value="stg_forma_pago_raw" Type="Path" />
+                </ExportDatasetAction>
+              </Actions>
+              <AnalysisView Version="2" AppVersion="5.9.8.17" LayoutMode="Filters" />
+            </Table>
+            <Table Name="public.franja_horaria 1" Left="887" Top="44" Width="500" Height="300" IsMinimized="false" ActiveActionIndex="1" ViewMode="Table">
+              <Actions>
+                <ImportSqlAction QueryLocationType="VisualEditor">
+                  <Query Version="7" AppVersion="5.9.8.17" QueryType="QueryBuilder" UseEmbeddedParameters="false" WindowWidth="1070" WindowHeight="600" QueryBuilderObjectsAreaWidth="255" QueryBuilderFiltersAreaHeight="250">
+                    <DataConnectorDefinition IsShared="true" Type="List" Name="ProyectoBI" />
+                    <QueryModel WhereConditionType="ConditionBuilder" HavingConditionType="ConditionBuilder" SelectAllRows="true" UseDistinct="false" AutoPreview="true" PreviewRows="100" PreFilterColumnValues="true">
+                      <TableName Value="public.franja_horaria" Type="List" />
+                      <SelectItems>
+                        <SqlSelectItem Type="Column" Name="id_franja" ColumnType="Number" />
+                        <SqlSelectItem Type="Column" Name="descripcion" ColumnType="Text" />
+                        <SqlSelectItem Type="Column" Name="dia_semana" ColumnType="Text" />
+                        <SqlSelectItem Type="Column" Name="hora_inicio" ColumnType="Other" />
+                        <SqlSelectItem Type="Column" Name="hora_fin" ColumnType="Other" />
+                      </SelectItems>
+                      <Expressions />
+                      <WhereConditionTree />
+                      <HavingConditionTree />
+                      <KnownDataTypes>
+                        <Item Name="id_franja" IsExpression="false" DataType="Number" />
+                        <Item Name="descripcion" IsExpression="false" DataType="Text" />
+                        <Item Name="dia_semana" IsExpression="false" DataType="Text" />
+                        <Item Name="hora_inicio" IsExpression="false" DataType="Other" />
+                        <Item Name="hora_fin" IsExpression="false" DataType="Other" />
+                      </KnownDataTypes>
+                    </QueryModel>
+                    <Parameters />
+                  </Query>
+                </ImportSqlAction>
+                <ExportDatasetAction AutoStatus="true" Mode="Local" FileExistsOption="Overwrite" EncryptColumns="false" AppendMode="AddNewColumns" ExportMode="CreateOrOverwrite">
+                  <FileName Value="stg_franja_horaria_raw" Type="Path" />
+                </ExportDatasetAction>
+              </Actions>
+              <AnalysisView Version="2" AppVersion="5.9.8.17" LayoutMode="Filters" />
+            </Table>
+            <Table Name="public.medico 1" Left="1066" Top="108" Width="500" Height="300" IsMinimized="false" ActiveActionIndex="1" ViewMode="Table">
+              <Actions>
+                <ImportSqlAction QueryLocationType="VisualEditor">
+                  <Query Version="7" AppVersion="5.9.8.17" QueryType="QueryBuilder" UseEmbeddedParameters="false" WindowWidth="1070" WindowHeight="600" QueryBuilderObjectsAreaWidth="255" QueryBuilderFiltersAreaHeight="250">
+                    <DataConnectorDefinition IsShared="true" Type="List" Name="ProyectoBI" />
+                    <QueryModel WhereConditionType="ConditionBuilder" HavingConditionType="ConditionBuilder" SelectAllRows="true" UseDistinct="false" AutoPreview="true" PreviewRows="100" PreFilterColumnValues="true">
+                      <TableName Value="public.medico" Type="List" />
+                      <SelectItems>
+                        <SqlSelectItem Type="Column" Name="id_medico" ColumnType="Number" />
+                        <SqlSelectItem Type="Column" Name="nombre" ColumnType="Text" />
+                        <SqlSelectItem Type="Column" Name="id_especialidad" ColumnType="Number" />
+                        <SqlSelectItem Type="Column" Name="id_sede" ColumnType="Number" />
+                        <SqlSelectItem Type="Column" Name="activo" ColumnType="Boolean" />
+                      </SelectItems>
+                      <Expressions />
+                      <WhereConditionTree />
+                      <HavingConditionTree />
+                      <KnownDataTypes>
+                        <Item Name="id_medico" IsExpression="false" DataType="Number" />
+                        <Item Name="nombre" IsExpression="false" DataType="Text" />
+                        <Item Name="id_especialidad" IsExpression="false" DataType="Number" />
+                        <Item Name="id_sede" IsExpression="false" DataType="Number" />
+                        <Item Name="activo" IsExpression="false" DataType="Boolean" />
+                      </KnownDataTypes>
+                    </QueryModel>
+                    <Parameters />
+                  </Query>
+                </ImportSqlAction>
+                <ExportDatasetAction AutoStatus="true" Mode="Local" FileExistsOption="Overwrite" EncryptColumns="false" AppendMode="AddNewColumns" ExportMode="CreateOrOverwrite">
+                  <FileName Value="stg_medico_raw" Type="Path" />
+                </ExportDatasetAction>
+              </Actions>
+              <AnalysisView Version="2" AppVersion="5.9.8.17" LayoutMode="Filters" />
+            </Table>
+            <Table Name="public.paciente 1" Left="687" Top="173" Width="500" Height="300" IsMinimized="false" ActiveActionIndex="1" ViewMode="Table">
+              <Actions>
+                <ImportSqlAction QueryLocationType="VisualEditor">
+                  <Query Version="7" AppVersion="5.9.8.17" QueryType="QueryBuilder" UseEmbeddedParameters="false" WindowWidth="1070" WindowHeight="600" QueryBuilderObjectsAreaWidth="255" QueryBuilderFiltersAreaHeight="250">
+                    <DataConnectorDefinition IsShared="true" Type="List" Name="ProyectoBI" />
+                    <QueryModel WhereConditionType="ConditionBuilder" HavingConditionType="ConditionBuilder" SelectAllRows="true" UseDistinct="false" AutoPreview="true" PreviewRows="100" PreFilterColumnValues="true">
+                      <TableName Value="public.paciente" Type="List" />
+                      <SelectItems>
+                        <SqlSelectItem Type="Column" Name="id_paciente" ColumnType="Number" />
+                        <SqlSelectItem Type="Column" Name="edad" ColumnType="Number" />
+                        <SqlSelectItem Type="Column" Name="sexo" ColumnType="Text" />
+                        <SqlSelectItem Type="Column" Name="id_tipo_cliente" ColumnType="Number" />
+                      </SelectItems>
+                      <Expressions />
+                      <WhereConditionTree />
+                      <HavingConditionTree />
+                      <KnownDataTypes>
+                        <Item Name="id_paciente" IsExpression="false" DataType="Number" />
+                        <Item Name="edad" IsExpression="false" DataType="Number" />
+                        <Item Name="sexo" IsExpression="false" DataType="Text" />
+                        <Item Name="id_tipo_cliente" IsExpression="false" DataType="Number" />
+                      </KnownDataTypes>
+                    </QueryModel>
+                    <Parameters />
+                  </Query>
+                </ImportSqlAction>
+                <ExportDatasetAction AutoStatus="true" Mode="Local" FileExistsOption="Overwrite" EncryptColumns="false" AppendMode="AddNewColumns" ExportMode="CreateOrOverwrite">
+                  <FileName Value="stg_paciente_raw" Type="Path" />
+                </ExportDatasetAction>
+              </Actions>
+              <AnalysisView Version="2" AppVersion="5.9.8.17" LayoutMode="Filters" />
+            </Table>
+          </Tables>
+        </Group>
+      </Groups>
+      <Parameters />
+      <Report UseCustomFileNameForPdfExport="false" ShowPageBorders="true">
+        <Pages>
+          <Page Name="Page 1" IncludeInReport="true">
+            <ReportObjects />
+          </Page>
+        </Pages>
+        <PageSetup Orientation="Landscape" Margin="Narrow" Size="Letter" />
+      </Report>
+    </Module>
+  </Modules>
+  <ProtectedDataConnectors />
+  <Resources />
+</Project>

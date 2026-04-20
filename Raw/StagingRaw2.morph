@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Version="29" AppVersion="5.9.8.17" ReadKey="readkey.4xRiK2cIQOI=.Z+m7vMo66uPuppNfL1q+mg==.P8t/AU6oGAmKREqXYijaVPVOO6qTmvRFPfRb7cAoX8tfVyzcHZmdb37O8i977bTpjl1hZfU4I0RhyyYpOyB7I/7oWjjW5BawD28MUuf2UJs=.lJDnENsZA9BMRdxeoTqdsQ6dEWOAMQ4AVgeOQUrK8bA=." WriteKeyPublic="BgIAAACkAABSU0ExAAgAAAEAAQDlgy6UwlNNhO7P9BIWd3LhpnlxhTLgkYtNsb21MYZYez2DGZE5xL6Y4cUvsEOBLsA8crj8Pwtg/7HtL/0Zrw/V3nCkOi5NFlb4Db0lh7pz/gsjxFTibRQq6zJVpWXF2f/JBeKDq38M7WxzBJ2wytUart/y0cfC0Lgq1EHtwzJBEk/CCoPCafOv4gKR40EN9mVStIYuqTfw/xt4OTpoqa3B2T2Yqxk1XboxX7YYA22rRWhITrRbGXENx7C1aguLsmfU42INzONuHngDz+yzOcN0Mv0+iK7eD5qOeEKsnRACBjs5X49nF1O5QHWOSxvDBVgRC5qYAI3WgSBkfquLKNfR" StartModuleName="Main" DocumentationTableOrder="ByExecutionOrder" EditedBy="A\axelb" LastEdited="2026-04-20T04:12:25.7484177Z" ComplexityLevel="Beginner" Signature="fji8d/7yq3HShTXgbGxhFgnYHTfCN1chn3VZeXW6IeM=">
+  <Modules>
+    <Module Name="Main" AutoRun="true" SelectedGroupName="Group 1">
+      <Groups>
+        <Group Name="Group 1">
+          <Tables>
+            <Table Name="public.paciente 1" Left="495" Top="37" Width="500" Height="300" IsMinimized="false" ActiveActionIndex="0" ViewMode="Table">
+              <Actions>
+                <ImportSqlAction QueryLocationType="VisualEditor">
+                  <Query Version="7" AppVersion="5.9.8.17" QueryType="QueryBuilder" UseEmbeddedParameters="false" WindowWidth="1070" WindowHeight="600" QueryBuilderObjectsAreaWidth="255" QueryBuilderFiltersAreaHeight="250">
+                    <DataConnectorDefinition IsShared="true" Type="List" Name="ProyectoBI" />
+                    <QueryModel WhereConditionType="ConditionBuilder" HavingConditionType="ConditionBuilder" SelectAllRows="true" UseDistinct="false" AutoPreview="true" PreviewRows="100" PreFilterColumnValues="true">
+                      <TableName Value="public.paciente" Type="List" />
+                      <SelectItems>
+                        <SqlSelectItem Type="Column" Name="id_paciente" ColumnType="Number" />
+                        <SqlSelectItem Type="Column" Name="edad" ColumnType="Number" />
+                        <SqlSelectItem Type="Column" Name="sexo" ColumnType="Text" />
+                        <SqlSelectItem Type="Column" Name="id_tipo_cliente" ColumnType="Number" />
+                      </SelectItems>
+                      <Expressions />
+                      <WhereConditionTree />
+                      <HavingConditionTree />
+                    </QueryModel>
+                    <Parameters />
+                  </Query>
+                </ImportSqlAction>
+              </Actions>
+              <AnalysisView Version="2" AppVersion="5.9.8.17" LayoutMode="Filters" />
+            </Table>
+          </Tables>
+        </Group>
+      </Groups>
+      <Parameters />
+      <Report UseCustomFileNameForPdfExport="false" ShowPageBorders="true">
+        <Pages>
+          <Page Name="Page 1" IncludeInReport="true">
+            <ReportObjects />
+          </Page>
+        </Pages>
+        <PageSetup Orientation="Landscape" Margin="Narrow" Size="Letter" />
+      </Report>
+    </Module>
+  </Modules>
+  <ProtectedDataConnectors />
+  <Resources />
+</Project>
