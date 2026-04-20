@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project Version="29" AppVersion="5.9.8.17" ReadKey="readkey.qXA2Js+XBRM=.SGtX02PH+TN2oxSWBGQvHQ==.VIgwgLam7YKFt/VQSoS2JVsNBsFCYHMoGXtTqN+SpF3xMRej0pflbYwtf41jJZ9NVBAnMQerLQBQXa2rcehZOfoIGvXrO9BZ6sFmCbjG8O4=.zdvie64jgNiBGwbbFwFJdZIRPdlC+Z+hk4V+ghOVyFk=." WriteKeyPublic="BgIAAACkAABSU0ExAAgAAAEAAQCpeUnoB0CMPPQsYu3jvzHTU0Fju5/kNK4DShcm5nBZVgbCQjvMb+Z1oxs1yd5Mc81+VIVoPX6vyha2DR518nJzA8qDyiF1vxk/5eqGC6YUvhrv8/U+MHQe/U+nAzJy15je2+GpNjNdVkZMOt0YJQxn22OxCZRXn+c5LJMbeaYXtysFmAmI+DQ2Y9PalIjGNXPtFpBTbabRNJBw6OGGyNQT52wyYymz7LzQxBi10JqQwUh7lG9tQh3unpEvja+6GTH/QUwIDnDHTuPuEtSnWmSMiBdG6mSi95BS6yEeRhCyQ8R11xTWckAPt4P0xv5AUf2Ntsd+og4efSWVUCqEgTLb" StartModuleName="Main" DocumentationTableOrder="ByExecutionOrder" EditedBy="A\axelb" LastEdited="2026-04-20T09:52:47.3343363Z" ComplexityLevel="Beginner" Signature="YqDFYHlJeUGXKJXQmRPoAYoKngSqeERuDBn7cHgl+C0=">
+<Project Version="29" AppVersion="5.9.8.17" ReadKey="readkey.ug5BUW2wYd8=.p+9RpRsrVOLXrZyzQ07Xjg==.hZx9BrQUKA/8JxtKLX2Z7uj1T7vD1WyW8ELWs4QpKTDGcKb9AOeNiNN3TWCYzLN8JdlCiGaZa70AAIO8HXlJX5R0KBS7OK/GXLjPBRWGpqI=.WHH9rFuw8tsvudPZwethzAbXKocFAoVIKFgNv8U+JNI=." WriteKeyPublic="BgIAAACkAABSU0ExAAgAAAEAAQClOOWnba93Q1G8b/XFyHpBXyliGmaFMEAnokVA3rCpI+lQxKvxOiGRdfep79CR7LxNcSRlJg/7/51Oi3z6QSIQSGIpVvUCZYuHajtBY93aF0oi7E+7abbCaQA3AO4XYwO6uf/Srkfq4tgvOdH/zJqi2t9NHiDU4QcJTKVEeOfteAMEHXRc46qNeQllk1HwUKcuena19uo/YMhrH6TjfV9oXa6UwQi9dbyhDtF9GnEby4pGBUnJTBjYyI+tvja2oCo28iDPMefhHxTSKsnv6HEBvjw4qklD+4favM31R0r03fPZPu0KBrKmxftprGIU07nu663X7jrFvFk7HTmlHEbR" StartModuleName="Main" DocumentationTableOrder="ByExecutionOrder" EditedBy="A\axelb" LastEdited="2026-04-20T11:36:51.6769694Z" ComplexityLevel="Beginner" Signature="6TspJveN9mHiZktIUCgAglv22Oq/0wxpGzAeZPL4Mgk=">
   <Modules>
     <Module Name="Main" AutoRun="true" SelectedGroupName="Group 1">
       <Groups>
@@ -126,7 +126,7 @@
               </Actions>
               <AnalysisView Version="2" AppVersion="5.9.8.17" LayoutMode="Filters" />
             </Table>
-            <Table Name="public.especialidad 1" Left="199" Top="577" Width="500" Height="300" IsMinimized="false" ActiveActionIndex="1" ViewMode="Table">
+            <Table Name="public.especialidad 1" Left="199" Top="577" Width="500" Height="300" IsMinimized="true" ActiveActionIndex="1" ViewMode="Table">
               <Actions>
                 <ImportSqlAction QueryLocationType="VisualEditor">
                   <Query Version="7" AppVersion="5.9.8.17" QueryType="QueryBuilder" UseEmbeddedParameters="false" WindowWidth="1070" WindowHeight="600" QueryBuilderObjectsAreaWidth="255" QueryBuilderFiltersAreaHeight="250">
@@ -184,7 +184,7 @@
               </Actions>
               <AnalysisView Version="2" AppVersion="5.9.8.17" LayoutMode="Filters" />
             </Table>
-            <Table Name="public.factura 1" Left="137" Top="185" Width="500" Height="300" IsMinimized="true" ActiveActionIndex="1" ViewMode="Table">
+            <Table Name="public.factura 1" Left="137" Top="185" Width="500" Height="300" IsMinimized="false" ActiveActionIndex="1" ViewMode="Table">
               <Actions>
                 <ImportSqlAction QueryLocationType="VisualEditor">
                   <MetaColumns>
@@ -325,7 +325,7 @@
               </Actions>
               <AnalysisView Version="2" AppVersion="5.9.8.17" LayoutMode="Filters" />
             </Table>
-            <Table Name="public.paciente 1" Left="133" Top="377" Width="500" Height="300" IsMinimized="false" ActiveActionIndex="1" ViewMode="Table">
+            <Table Name="public.paciente 1" Left="133" Top="377" Width="500" Height="300" IsMinimized="true" ActiveActionIndex="1" ViewMode="Table">
               <Actions>
                 <ImportSqlAction QueryLocationType="VisualEditor">
                   <Query Version="7" AppVersion="5.9.8.17" QueryType="QueryBuilder" UseEmbeddedParameters="false" WindowWidth="1070" WindowHeight="600" QueryBuilderObjectsAreaWidth="255" QueryBuilderFiltersAreaHeight="250">

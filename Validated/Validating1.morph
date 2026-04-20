@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Version="29" AppVersion="5.9.8.17" ReadKey="readkey.ermXVuj2Bsc=.UFL6YJoFaCIkMvTAky/auQ==.D+5pf1SuJUMgaVcayJZfaISKPmNu4LEzhjFEPyl/rDJ0k4ZlxYA3gLt/+nHLCodSDPpD7r98kTGZqLCQDTLZlcdXFtBq+T5o+XxtfswnqCw=.X1R+RkTZIJ1XcktpbCe+TjZhYaLGw1AZlh+XAqFOpZI=." WriteKeyPublic="BgIAAACkAABSU0ExAAgAAAEAAQAF73hNjseZdP5UfL4UposvsjcagYFRYO/5WeOKr+OZJda9a4b2Xc8FqswepnuRlr+emNAZFNXuaIcGHjZAlYkNBBBCCwSxxWbwdPGIa+gP9dX0psP5aofL+XfVt7w3oXrxGHKrhTEUWDVDD7KaGSFgZ9lOtDK99uOKKY0IZOAou9Wk/24eidYL0ac662hGF0RFbSlWovAaC3sGywbvTSWVNxvkgX9BUBRy1rgPkYKltBhu1SPkv/yDvDMg63IRCgQYHYmZxgB6I1zhpw47mrTNioVRtmUepuNb/Fe9MtzTZkMsRLjRwdJaCNh7RvL/2el5YUldXDk+MZbbyu3mgomj" StartModuleName="Main" DocumentationTableOrder="ByExecutionOrder" EditedBy="A\axelb" LastEdited="2026-04-20T11:47:03.8252387Z" ComplexityLevel="Beginner" Signature="HUohEHXp7mbld7y+MHkYYFx8ZJ6SCh9HloFI1VbbpA4=">
+  <Modules>
+    <Module Name="Main" AutoRun="true" SelectedGroupName="Group 1">
+      <Groups>
+        <Group Name="Group 1">
+          <Tables>
+            <Table Name="stg_detalle_factura_profiled.dset" Left="41" Top="252" Width="500" Height="298" IsMinimized="false" ActiveActionIndex="8" ViewMode="Table">
+              <Actions>
+                <ImportDatasetAction AutoStatus="true" Mode="Local" ImportMode="Data" LoadAllColumns="true">
+                  <InputFileDefinition Mode="Single">
+                    <FileName Value="C:\Users\axelb\OneDrive\Escritorio\ProyectoBI\ProyectoBI\Profiled\stg_detalle_factura_profiled.dset" Type="Path" />
+                  </InputFileDefinition>
+                </ImportDatasetAction>
+                <DeduplicateAction CompareAllColumns="false">
+                  <ColumnNames>
+                    <Item>id_detalle_factura</Item>
+                  </ColumnNames>
+                </DeduplicateAction>
+                <ExpressionFilterAction Condition="[cantidad] &gt;= 0 and [precio_unitario] &gt;= 0 and [subtotal_linea] &gt;= 0" />
+                <MergeAction SecondTableName="stg_procedimiento_profiled.dset" SecondTableExists="true" MergeMode="LeftJoin">
+                  <Columns>
+                    <Item>id_cita</Item>
+                  </Columns>
+                  <MatchingColumns>
+                    <NamePair Name1="id_procedimiento" Name2="id_procedimiento" />
+                  </MatchingColumns>
+                </MergeAction>
+                <ReplaceColumnsAction>
+                  <Columns>
+                    <NameExpressionPair Name="id_cita">
+                      <Expression Value="if(isempty([id_cita]), [id_cita(2)], [id_cita])" Type="Expression" />
+                    </NameExpressionPair>
+                  </Columns>
+                </ReplaceColumnsAction>
+                <KeepRemoveColumnsAction Mode="Remove" FailIfColumnsNotFound="false">
+                  <ColumnNames>
+                    <Item>id_cita(2)</Item>
+                  </ColumnNames>
+                </KeepRemoveColumnsAction>
+                <ReplaceColumnsAction>
+                  <Columns>
+                    <NameExpressionPair Name="flag_nulls">
+                      <Expression Value="if(&#xD;&#xA;  isempty([id_cita]) OR &#xD;&#xA;  isempty([id_detalle_factura]) OR &#xD;&#xA;  isempty([id_factura]) OR &#xD;&#xA;  isempty([id_procedimiento]) OR &#xD;&#xA;  isempty([id_servicio]), &#xD;&#xA;  &quot;ERROR&quot;, &#xD;&#xA;  &quot;OK&quot;&#xD;&#xA;)" Type="Expression" />
+                    </NameExpressionPair>
+                  </Columns>
+                </ReplaceColumnsAction>
+                <ExpressionFilterAction Condition="[flag_nulls] = &quot;OK&quot;" />
+                <ExportDatasetAction AutoStatus="true" Mode="Local" FileExistsOption="HaltProjectExecution" EncryptColumns="false" AppendMode="AddNewColumns" ExportMode="CreateOrOverwrite">
+                  <FileName Value="stg_detalle_factura_validated.dset" Type="Path" />
+                </ExportDatasetAction>
+              </Actions>
+              <AnalysisView Version="2" AppVersion="5.9.8.17" LayoutMode="Filters" />
+            </Table>
+            <Table Name="stg_procedimiento_profiled.dset" Left="592" Top="95" Width="500" Height="312" IsMinimized="false" ActiveActionIndex="4" ViewMode="Table">
+              <Actions>
+                <ImportDatasetAction AutoStatus="true" Mode="Local" ImportMode="Data" LoadAllColumns="true">
+                  <MetaColumns>
+                    <MetaColumn OriginalName="fecha" />
+                  </MetaColumns>
+                  <InputFileDefinition Mode="Single">
+                    <FileName Value="C:\Users\axelb\OneDrive\Escritorio\ProyectoBI\ProyectoBI\Profiled\stg_procedimiento_profiled.dset" Type="Path" />
+                  </InputFileDefinition>
+                </ImportDatasetAction>
+                <DeduplicateAction CompareAllColumns="false">
+                  <ColumnNames>
+                    <Item>id_procedimiento</Item>
+                  </ColumnNames>
+                </DeduplicateAction>
+                <ReplaceColumnsAction>
+                  <Columns>
+                    <NameExpressionPair Name="observaciones">
+                      <Expression Value="if istext([observaciones]) then trim([observaciones]) else [observaciones]" Type="Expression" />
+                    </NameExpressionPair>
+                  </Columns>
+                </ReplaceColumnsAction>
+                <ExpressionFilterAction Condition="[flag_nulls] = &quot;OK&quot;" />
+                <ExportDatasetAction AutoStatus="true" Mode="Local" FileExistsOption="HaltProjectExecution" EncryptColumns="false" AppendMode="AddNewColumns" ExportMode="CreateOrOverwrite">
+                  <FileName Value="stg_procedimiento_validated.dset" Type="Path" />
+                </ExportDatasetAction>
+              </Actions>
+              <AnalysisView Version="2" AppVersion="5.9.8.17" LayoutMode="Filters" />
+            </Table>
+          </Tables>
+        </Group>
+      </Groups>
+      <Parameters />
+      <Report UseCustomFileNameForPdfExport="false" ShowPageBorders="true">
+        <Pages>
+          <Page Name="Page 1" IncludeInReport="true">
+            <ReportObjects />
+          </Page>
+        </Pages>
+        <PageSetup Orientation="Landscape" Margin="Narrow" Size="Letter" />
+      </Report>
+    </Module>
+  </Modules>
+  <ProtectedDataConnectors />
+  <Resources />
+</Project>

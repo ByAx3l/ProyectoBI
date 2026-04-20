@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Version="29" AppVersion="5.9.8.17" ReadKey="readkey.kWO2qpBXuI8=.2gkBuqSKbFZXTQBUXtgDAA==.hmQwoa+6E9VIHE5XrnULV3xulJsYf1uExPAd9jcPNM+HVUHf3xy4pwjkpEY+hIs+oHy5+bMLgP8Bbuf9guIKmgD9GYwUDo3jEymDerCqjYc=.Vvl5ihHRjVY3aV7dJwnsZdVbELaGQih3kt48+s0FPz0=." WriteKeyPublic="BgIAAACkAABSU0ExAAgAAAEAAQAFc8R1Eraunj/uLY7e6xXg9A88Ao/6ujmndlXXR8+0jxU/siCM0FYYyfar1VTYGJB6H1NYVMElYIDU5kQIbEgiDKFigazV3leYBSaTxSS+BKkO8EUzjhQtm4c5fCX43hWRQZkpdRX2NxNQGLvGK2sQLE7IAF41TkwUVLtle4PTcIlJrNHlxPw5Ep7tiOtprnZcfGDdV2RhaMXxfWvC1h4Lw0bJhFjVE5NTVHqQFjaTApg4yWb7cs5zyb2y2aijgvr86wgJ5ZqUw4J3/XkMbvru3rxDsE8kY4REb1EKDEqOMLLAqUA/De3jvKVlnI56d4Ds1czK/FROuk7k05sJpty/" StartModuleName="Main" DocumentationTableOrder="ByExecutionOrder" EditedBy="A\axelb" LastEdited="2026-04-20T11:45:53.2557290Z" ComplexityLevel="Beginner" Signature="9oCz23oOiQPFAkxIIhE4LhHYqAHyn209vChWTVmKyYY=">
+  <Modules>
+    <Module Name="Main" AutoRun="true" SelectedGroupName="Group 1">
+      <Groups>
+        <Group Name="Group 1">
+          <Tables>
+            <Table Name="stg_cita_profiled.dset" Left="284" Top="437" Width="500" Height="300" IsMinimized="false" ActiveActionIndex="4" ViewMode="Table">
+              <Actions>
+                <ImportDatasetAction AutoStatus="true" Mode="Local" ImportMode="Data" LoadAllColumns="true">
+                  <MetaColumns>
+                    <MetaColumn OriginalName="fecha" />
+                  </MetaColumns>
+                  <InputFileDefinition Mode="Single">
+                    <FileName Value="C:\Users\axelb\OneDrive\Escritorio\ProyectoBI\ProyectoBI\Profiled\stg_cita_profiled.dset" Type="Path" />
+                  </InputFileDefinition>
+                </ImportDatasetAction>
+                <DeduplicateAction CompareAllColumns="false">
+                  <ColumnNames>
+                    <Item>id_cita</Item>
+                  </ColumnNames>
+                </DeduplicateAction>
+                <ReplaceColumnsAction>
+                  <Columns>
+                    <NameExpressionPair Name="hora_programada">
+                      <Expression Value="if istext([hora_programada]) then trim([hora_programada]) else [hora_programada]" Type="Expression" />
+                    </NameExpressionPair>
+                    <NameExpressionPair Name="observaciones">
+                      <Expression Value="if istext([observaciones]) then trim([observaciones]) else [observaciones]" Type="Expression" />
+                    </NameExpressionPair>
+                  </Columns>
+                </ReplaceColumnsAction>
+                <ExpressionFilterAction Condition="[flag_nulls] = &quot;OK&quot;" />
+                <ExportDatasetAction AutoStatus="true" Mode="Local" FileExistsOption="Overwrite" EncryptColumns="false" AppendMode="AddNewColumns" ExportMode="CreateOrOverwrite">
+                  <FileName Value="stg_cita_validated.dset" Type="Path" />
+                </ExportDatasetAction>
+              </Actions>
+              <AnalysisView Version="2" AppVersion="5.9.8.17" LayoutMode="Filters" />
+            </Table>
+            <Table Name="stg_factura_profiled.dset" Left="476" Top="69" Width="500" Height="300" IsMinimized="false" ActiveActionIndex="4" ViewMode="Table">
+              <Actions>
+                <ImportDatasetAction AutoStatus="true" Mode="Local" ImportMode="Data" LoadAllColumns="true">
+                  <MetaColumns>
+                    <MetaColumn OriginalName="fecha" />
+                  </MetaColumns>
+                  <InputFileDefinition Mode="Single">
+                    <FileName Value="C:\Users\axelb\OneDrive\Escritorio\ProyectoBI\ProyectoBI\Profiled\stg_factura_profiled.dset" Type="Path" />
+                  </InputFileDefinition>
+                </ImportDatasetAction>
+                <DeduplicateAction CompareAllColumns="false">
+                  <ColumnNames>
+                    <Item>id_factura</Item>
+                  </ColumnNames>
+                </DeduplicateAction>
+                <ExpressionFilterAction Condition="[subtotal] &gt;= 0 and [impuesto] &gt;= 0 and [total] &gt;= 0" />
+                <ReplaceColumnsAction>
+                  <Columns>
+                    <NameExpressionPair Name="numero_factura">
+                      <Expression Value="if istext([numero_factura]) then trim([numero_factura]) else [numero_factura]" Type="Expression" />
+                    </NameExpressionPair>
+                  </Columns>
+                </ReplaceColumnsAction>
+                <ExportDatasetAction AutoStatus="true" Mode="Local" FileExistsOption="Overwrite" EncryptColumns="false" AppendMode="AddNewColumns" ExportMode="CreateOrOverwrite">
+                  <FileName Value="stg_factura_validated.dset" Type="Path" />
+                </ExportDatasetAction>
+              </Actions>
+              <AnalysisView Version="2" AppVersion="5.9.8.17" LayoutMode="Filters" />
+            </Table>
+          </Tables>
+        </Group>
+      </Groups>
+      <Parameters />
+      <Report UseCustomFileNameForPdfExport="false" ShowPageBorders="true">
+        <Pages>
+          <Page Name="Page 1" IncludeInReport="true">
+            <ReportObjects />
+          </Page>
+        </Pages>
+        <PageSetup Orientation="Landscape" Margin="Narrow" Size="Letter" />
+      </Report>
+    </Module>
+  </Modules>
+  <ProtectedDataConnectors />
+  <Resources />
+</Project>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project Version="29" AppVersion="5.9.8.17" ReadKey="readkey.NrMZj++5Dao=.YV7OZ8IlZGNzsSFEYbjNGA==.WAg0NrQimPsTz0Be01L7b/ODnPdEOBFhrjVqRa/XfdQacnxJUMC2wZyVCZP0xDH2TyvF5NZuAZlzMPXHcXJ7ljPRNhn1MilgfpUzJVoXOkM=.zrsWBe/EM/0kEA61bE7JndDPWB5YYv9PpvB3idAW9lw=." WriteKeyPublic="BgIAAACkAABSU0ExAAgAAAEAAQBV1kRYFjYFhmYKlOvAxWaM4BE3PNdXx8z43AfsAVtyhdsiBPHILfWpqoug8vYdBRoo9Qqwo2EE29Z+vLpihb5WXromc6gRukCyemo4iphn1uNaNBEWF5kuL7AtmKVKMhNjGFZ4D6QXoRqs+wYVrTEYLEi7B90tov/1E4WbrRIKqUS6gf7rKmBGWe8MWqcJJjmlBLbiO/gkLyfh3T4UIJStaCx65yR2xXPfjbLICdSYGQGfUWZn09+cgjoCEDoJ7frjPQ6NNaLb05W+N0tldlcvnHottLBnUqyV92r4jnIvxSr4ochf2YLRlxS03Vich0wH/vq8Xy+SsGELvDOX5KSy" StartModuleName="Main" DocumentationTableOrder="ByExecutionOrder" EditedBy="A\axelb" LastEdited="2026-04-20T10:18:57.4031356Z" ComplexityLevel="Beginner" Signature="TwY3x2Mpx0+ddTtNhuAO0CvHyXvqt76YuAE4UykexjU=">
+<Project Version="29" AppVersion="5.9.8.17" ReadKey="readkey.760TUPKcIvQ=.vOPoOffMyZCxe2lp0yjSzQ==.viyeDgdulYZvS4dCo4Yd494X40f175QDNJGyIYRB+8nU86G1dvJR8PtDgKRWyDQ7giDhsRrI0K84pceFiASQ6r9JJxCeERXjrdwQF7o07Xs=.LSY8G+CYETvCThV/5zp9tssNAjiZPXvwlAqX7cbtp8w=." WriteKeyPublic="BgIAAACkAABSU0ExAAgAAAEAAQBdRMY8UDGIZGhOhJilTzl+NQbsIydlKDVaLfzmt5Um1b/S6eEFkilLDF3fbFym27IVPcMm0gcvIYVasQjg8bXO9DOnwbkT4xj1ZgSG7jR0F6mVfszVfxKDWC50AZ753tATFCHXP6jdG+5+S7vzDM+d9h6/0qso77iPO4agl7+nnpXkM5A6+mbNMYo8F5Gj3+8hf+6bkptGNEjaOQJ045kyBHexyEzSAqK4nXJuqtxOFKV6mUmlT6zpTGKR8hVChcr0v8CCJKGtt0bAaxchl2fXpp01Pw9Db8HiPPL2kX7LT2z0I2z1dA9DpGHP9EROXM3qIJ45Vfw2dojcmogSsnz0" StartModuleName="Main" DocumentationTableOrder="ByExecutionOrder" EditedBy="A\axelb" LastEdited="2026-04-20T11:22:57.9152249Z" ComplexityLevel="Beginner" Signature="GfJ3dJLhI6OE3iaRL4De45IDaIJtycrZPG3giLgvD1c=">
   <Modules>
     <Module Name="Main" AutoRun="true" SelectedGroupName="Group 1">
       <Groups>
@@ -80,7 +80,7 @@
                 <AddColumnsAction ColumnExistsOption="Rename">
                   <Columns>
                     <NameExpressionPair Name="flag_nulls">
-                      <Expression Value="if(&#xD;&#xA;  isempty([id_factura]) OR &#xD;&#xA;  isempty([id_paciente]) OR &#xD;&#xA;  isempty([numero_factura]) OR&#xD;&#xA;  isempty([id_aseguradora]) OR  &#xD;&#xA;  isempty([total]), &#xD;&#xA;  &quot;ERROR&quot;, &#xD;&#xA;  &quot;OK&quot;&#xD;&#xA;)" Type="Expression" />
+                      <Expression Value="if(&#xD;&#xA;  isempty([id_factura]) OR &#xD;&#xA;  isempty([id_paciente]) OR &#xD;&#xA;  isempty([numero_factura]) OR  &#xD;&#xA;  isempty([total]), &#xD;&#xA;  &quot;ERROR&quot;, &#xD;&#xA;  &quot;OK&quot;&#xD;&#xA;)" Type="Expression" />
                     </NameExpressionPair>
                     <NameExpressionPair Name="flag_numero">
                       <Expression Value="if(&#xD;&#xA;  (IsNumber([impuesto])) or (IsNumeric([impuesto])) and&#xD;&#xA;  (IsNumber([subtotal])) or (IsNumeric([subtotal])) and&#xD;&#xA;  (IsNumber([total])) or (IsNumeric([total])),&#xD;&#xA; &quot;OK&quot;, &quot;ERROR&quot;)" Type="Expression" />
