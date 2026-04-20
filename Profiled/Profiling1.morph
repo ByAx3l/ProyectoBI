@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Version="29" AppVersion="5.9.8.17" ReadKey="readkey.U2oVf8DXm94=.XkXLw4NARIMpOFz4MuIzEw==.ksIJjB2FsGmlMTtLa+DTqyJcGpf753duyz4+nnwnYRCBX3TTOL7eXc1OdSfSPl71Dd3lWdlvlra1+95FPuoa1g1g7Onmh84zu6uGHZeTl2I=.iNYgChE0gNez8uyBFwesO4cGlX9Yc7808+osGcL3Ej8=." WriteKeyPublic="BgIAAACkAABSU0ExAAgAAAEAAQCd9NzX8BL7RnoM15Fn5BmXnUt4HEryxpN8gI9HkNYFduhcnriuvbOatrRZ/iMl8NNgscQSjXDrlrofuCnwiv5KhSPQAvjV2XLlj8b3j2pWZHqNEAMMataE+AM+4HxCh7CHYyJUu0JXmhQhB4ufqvqOlUdVmMjUzvSZPRIKc12RwSaNJjXQ20UIidv/u4mpHPFLvvG3XJnNZWD4JuCDoz8cH2R/Q7jYSf26hli1/IL8yx90kupide6lUPB9cDgJX2rArpK78fQxXywv/7489t4gXrwrVyYqyPfH3zYMG1ImVFmQy0FHPNDrKsr9VtFPSYbTz0GPYXz4gcbCDq2n3hnB" StartModuleName="Main" DocumentationTableOrder="ByExecutionOrder" EditedBy="A\axelb" LastEdited="2026-04-20T10:18:58.8310489Z" ComplexityLevel="Beginner" Signature="1xiq0TTFUxOZDvP6ESAfo/MxPRsMZViMz8b1Atxy7mc=">
+  <Modules>
+    <Module Name="Main" AutoRun="true" SelectedGroupName="Group 1">
+      <Groups>
+        <Group Name="Group 1">
+          <Tables>
+            <Table Name="stg_cita_raw.dset" Left="106" Top="476" Width="500" Height="300" IsMinimized="false" ActiveActionIndex="1" ViewMode="Table">
+              <Actions>
+                <ImportDatasetAction AutoStatus="true" Mode="Local" ImportMode="Data" LoadAllColumns="true">
+                  <MetaColumns>
+                    <MetaColumn OriginalName="fecha" />
+                  </MetaColumns>
+                  <InputFileDefinition Mode="Single">
+                    <FileName Value="C:\Users\axelb\OneDrive\Escritorio\ProyectoBI\ProyectoBI\Raw\stg_cita_raw.dset" Type="Path" />
+                  </InputFileDefinition>
+                </ImportDatasetAction>
+                <AddColumnsAction ColumnExistsOption="Rename">
+                  <Columns>
+                    <NameExpressionPair Name="flag_nulls">
+                      <Expression Value="if(&#xD;&#xA;  isempty([id_cita]) OR &#xD;&#xA;  isempty([id_estado]) OR &#xD;&#xA;  isempty([id_servicio]) OR&#xD;&#xA;  isempty([id_paciente]) OR  &#xD;&#xA;  isempty([id_medico]), &#xD;&#xA;  &quot;ERROR&quot;, &#xD;&#xA;  &quot;OK&quot;&#xD;&#xA;)" Type="Expression" />
+                    </NameExpressionPair>
+                    <NameExpressionPair Name="flag_fecha">
+                      <Expression Value="if(IsTextDate([fecha]), &quot;ERROR&quot;, &quot;OK&quot;)" Type="Expression" />
+                    </NameExpressionPair>
+                    <NameExpressionPair Name="flag_texto">
+                      <Expression Value="if(IsText([observaciones]) and (IsText([hora_programada])), &quot;OK&quot;, &quot;ERROR&quot;)" Type="Expression" />
+                    </NameExpressionPair>
+                    <NameExpressionPair Name="flag_tipo_invalido">
+                      <Expression Value="if(&#xD;&#xA;  [flag_fecha] = &quot;ERROR&quot; or&#xD;&#xA;  [flag_texto] = &quot;ERROR&quot;,&#xD;&#xA;  &quot;ERROR&quot;,&#xD;&#xA;  &quot;OK&quot;&#xD;&#xA;)" Type="Expression" />
+                    </NameExpressionPair>
+                  </Columns>
+                  <InsertPosition Position="Rightmost" />
+                </AddColumnsAction>
+                <ExportDatasetAction AutoStatus="true" Mode="Local" FileExistsOption="Overwrite" EncryptColumns="false" AppendMode="AddNewColumns" ExportMode="CreateOrOverwrite">
+                  <FileName Value="stg_cita_profiled.dset" Type="Path" />
+                </ExportDatasetAction>
+              </Actions>
+              <AnalysisView Version="2" AppVersion="5.9.8.17" LayoutMode="Filters" />
+            </Table>
+            <Table Name="stg_cita_raw.dset (2)" Left="666" Top="450" Width="500" Height="300" IsMinimized="true" ActiveActionIndex="1" ViewMode="Table">
+              <Actions>
+                <DeriveTableAction SourceTableName="stg_cita_raw.dset" IsConditional="false" />
+                <AggregateAction>
+                  <AggregateColumns>
+                    <AggregateColumn ColumnName="id_cita" Aggregation="Count" />
+                  </AggregateColumns>
+                  <GroupColumns>
+                    <Item>id_estado</Item>
+                  </GroupColumns>
+                </AggregateAction>
+              </Actions>
+              <AnalysisView Version="2" AppVersion="5.9.8.17" LayoutMode="Filters" />
+            </Table>
+            <Table Name="stg_cita_raw.dset (3)" Left="688" Top="590" Width="500" Height="300" IsMinimized="true" ActiveActionIndex="1" ViewMode="Table">
+              <Actions>
+                <DeriveTableAction SourceTableName="stg_cita_raw.dset" IsConditional="false" />
+                <MetadataAction TableName="false" TotalRows="true" TotalColumns="true" ColumnNames="false" DistinctCount="false" AllUnique="false" EmptyCount="false" ErrorCount="false" TextCount="false" NumberCount="false" IntegerCount="false" NonIntegerCount="false" MinNumber="false" MaxNumber="false" MinTextLength="false" MaxTextLength="false" OriginalName="false" NumberFormat="false" Annotation="false" VocabularySymbolCount="false" IsVocabularyExact="false" HasNothing="false" />
+              </Actions>
+              <AnalysisView Version="2" AppVersion="5.9.8.17" LayoutMode="Filters" />
+            </Table>
+            <Table Name="stg_cita_raw.dset (4)" Left="679" Top="518" Width="500" Height="300" IsMinimized="true" ActiveActionIndex="1" ViewMode="Table">
+              <Actions>
+                <DeriveTableAction SourceTableName="stg_cita_raw.dset" IsConditional="false" />
+                <KeepDuplicatesAction CompareAllColumns="false">
+                  <ColumnNames>
+                    <Item>id_cita</Item>
+                  </ColumnNames>
+                </KeepDuplicatesAction>
+              </Actions>
+              <AnalysisView Version="2" AppVersion="5.9.8.17" LayoutMode="Filters" />
+            </Table>
+            <Table Name="Table 1" Left="67" Top="89" Width="498" Height="300" IsMinimized="false" ActiveActionIndex="1" ViewMode="Table">
+              <Actions>
+                <ImportDatasetAction AutoStatus="true" Mode="Local" ImportMode="Data" LoadAllColumns="true">
+                  <MetaColumns>
+                    <MetaColumn OriginalName="fecha" />
+                  </MetaColumns>
+                  <InputFileDefinition Mode="Single">
+                    <FileName Value="C:\Users\axelb\OneDrive\Escritorio\ProyectoBI\ProyectoBI\Raw\stg_procedimiento_raw.dset" Type="Path" />
+                  </InputFileDefinition>
+                </ImportDatasetAction>
+                <AddColumnsAction ColumnExistsOption="Rename">
+                  <Columns>
+                    <NameExpressionPair Name="flag_nulls">
+                      <Expression Value="if(&#xD;&#xA;  isempty([id_aseguradora]) OR &#xD;&#xA;  isempty([id_cita]) OR &#xD;&#xA;  isempty([id_medico]) OR&#xD;&#xA;  isempty([id_paciente]) OR  &#xD;&#xA;  isempty([id_procedimiento]) OR  &#xD;&#xA;  isempty([id_servicio]), &#xD;&#xA;  &quot;ERROR&quot;, &#xD;&#xA;  &quot;OK&quot;&#xD;&#xA;)" Type="Expression" />
+                    </NameExpressionPair>
+                    <NameExpressionPair Name="flag_numero">
+                      <Expression Value="if(&#xD;&#xA;  (IsNumber([cantidad])) or (IsNumeric([cantidad])),&#xD;&#xA; &quot;OK&quot;, &quot;ERROR&quot;)" Type="Expression" />
+                    </NameExpressionPair>
+                    <NameExpressionPair Name="flag_fecha">
+                      <Expression Value="if(IsTextDate([fecha]), &quot;ERROR&quot;, &quot;OK&quot;)" Type="Expression" />
+                    </NameExpressionPair>
+                    <NameExpressionPair Name="flag_texto">
+                      <Expression Value="if(IsText([observaciones]), &quot;OK&quot;, &quot;ERROR&quot;)" Type="Expression" />
+                    </NameExpressionPair>
+                    <NameExpressionPair Name="flag_tipo_invalido">
+                      <Expression Value="if(&#xD;&#xA;  [flag_numero] = &quot;ERROR&quot; or&#xD;&#xA;  [flag_fecha] = &quot;ERROR&quot; or&#xD;&#xA;  [flag_texto] = &quot;ERROR&quot;,&#xD;&#xA;  &quot;ERROR&quot;,&#xD;&#xA;  &quot;OK&quot;&#xD;&#xA;)" Type="Expression" />
+                    </NameExpressionPair>
+                  </Columns>
+                  <InsertPosition Position="Rightmost" />
+                </AddColumnsAction>
+                <ExportDatasetAction AutoStatus="true" Mode="Local" FileExistsOption="Overwrite" EncryptColumns="false" AppendMode="AddNewColumns" ExportMode="CreateOrOverwrite">
+                  <FileName Value="stg_procedimiento_profiled.dset" Type="Path" />
+                </ExportDatasetAction>
+              </Actions>
+              <AnalysisView Version="2" AppVersion="5.9.8.17" LayoutMode="Filters" />
+            </Table>
+            <Table Name="Table 1 (2)" Left="670" Top="219" Width="500" Height="300" IsMinimized="true" ActiveActionIndex="1" ViewMode="Table">
+              <Actions>
+                <DeriveTableAction SourceTableName="Table 1" IsConditional="false" />
+                <MetadataAction TableName="false" TotalRows="true" TotalColumns="true" ColumnNames="false" DistinctCount="false" AllUnique="false" EmptyCount="false" ErrorCount="false" TextCount="false" NumberCount="false" IntegerCount="false" NonIntegerCount="false" MinNumber="false" MaxNumber="false" MinTextLength="false" MaxTextLength="false" OriginalName="false" NumberFormat="false" Annotation="false" VocabularySymbolCount="false" IsVocabularyExact="false" HasNothing="false" />
+              </Actions>
+              <AnalysisView Version="2" AppVersion="5.9.8.17" LayoutMode="Filters" />
+            </Table>
+            <Table Name="Table 1 (3)" Left="678" Top="22" Width="500" Height="300" IsMinimized="true" ActiveActionIndex="1" ViewMode="Table">
+              <Actions>
+                <DeriveTableAction SourceTableName="Table 1" IsConditional="false" />
+                <KeepDuplicatesAction CompareAllColumns="false">
+                  <ColumnNames>
+                    <Item>id_procedimiento</Item>
+                    <Item>id_cita</Item>
+                  </ColumnNames>
+                </KeepDuplicatesAction>
+              </Actions>
+              <AnalysisView Version="2" AppVersion="5.9.8.17" LayoutMode="Filters" />
+            </Table>
+            <Table Name="Table 2" Left="671" Top="138" Width="500" Height="300" IsMinimized="true" ActiveActionIndex="1" ViewMode="Table">
+              <Actions>
+                <DeriveTableAction SourceTableName="Table 1" IsConditional="false" />
+                <AggregateAction>
+                  <AggregateColumns>
+                    <AggregateColumn ColumnName="id_procedimiento" Aggregation="Count" />
+                  </AggregateColumns>
+                  <GroupColumns>
+                    <Item>id_cita</Item>
+                  </GroupColumns>
+                </AggregateAction>
+              </Actions>
+              <AnalysisView Version="2" AppVersion="5.9.8.17" LayoutMode="Filters" />
+            </Table>
+          </Tables>
+        </Group>
+      </Groups>
+      <Parameters />
+      <Report UseCustomFileNameForPdfExport="false" ShowPageBorders="true">
+        <Pages>
+          <Page Name="Page 1" IncludeInReport="true">
+            <ReportObjects />
+          </Page>
+        </Pages>
+        <PageSetup Orientation="Landscape" Margin="Narrow" Size="Letter" />
+      </Report>
+    </Module>
+  </Modules>
+  <ProtectedDataConnectors />
+  <Resources />
+</Project>

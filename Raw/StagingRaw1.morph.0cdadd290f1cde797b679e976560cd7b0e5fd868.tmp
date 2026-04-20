@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project Version="29" AppVersion="5.9.8.17" ReadKey="readkey.YwvI5wBMkdM=.Tg/fImFO8bvciJrTs6/tgw==.ufkA+iMw9anBO7GapFZDta4TG5YpvSlf6QMimQLUzUw2Ry7jNfpOF5mHX/g9439bHlJ2iMDUyOznKfQMu9EWuoGSr0CXi1qjCOXMPUYmuww=.+isDNcEOVbdtfHOQMZmc2V4wiZuwmjrrP81u4DVYhvE=." WriteKeyPublic="BgIAAACkAABSU0ExAAgAAAEAAQBdaRSLdlKGmA9IdprRSMt8D2bvvufPCZH85wbBFoGe7T5JgxlQxyZVnW0Tu7qV207auj/SjinkWYUgrrCIk3+E6iShZVcgGpZDd1n5JJ1vECH6kVPGJxp/IOZswtfX6qcvJ9R52Z2sGIOgTZ9qOmJ358pn24M9H42+aujUMDRoMAtNha8ujNW4PPFgS3JFkNynCbHKGx8Yrt9csQIgLKfbXj3973EMh1uSJddNtjigQiHtL1ZUjZyJlIEkxuIzZQl2roA0AOETg4qUbKm3uGZeD1a59M+eqD3hQ+gpMR0h42rCxQ1f0xD5Jgf/RqzczurmE7qVrrVtzbJoWOK/oe64" StartModuleName="Main" DocumentationTableOrder="ByExecutionOrder" EditedBy="A\axelb" LastEdited="2026-04-20T05:27:41.0322590Z" ComplexityLevel="Beginner" Signature="+3D8uAlxqU3/MigAAWNYJKkFK0lM6ZhfsxZOGPKy/Og=">
+<Project Version="29" AppVersion="5.9.8.17" ReadKey="readkey.qXA2Js+XBRM=.SGtX02PH+TN2oxSWBGQvHQ==.VIgwgLam7YKFt/VQSoS2JVsNBsFCYHMoGXtTqN+SpF3xMRej0pflbYwtf41jJZ9NVBAnMQerLQBQXa2rcehZOfoIGvXrO9BZ6sFmCbjG8O4=.zdvie64jgNiBGwbbFwFJdZIRPdlC+Z+hk4V+ghOVyFk=." WriteKeyPublic="BgIAAACkAABSU0ExAAgAAAEAAQCpeUnoB0CMPPQsYu3jvzHTU0Fju5/kNK4DShcm5nBZVgbCQjvMb+Z1oxs1yd5Mc81+VIVoPX6vyha2DR518nJzA8qDyiF1vxk/5eqGC6YUvhrv8/U+MHQe/U+nAzJy15je2+GpNjNdVkZMOt0YJQxn22OxCZRXn+c5LJMbeaYXtysFmAmI+DQ2Y9PalIjGNXPtFpBTbabRNJBw6OGGyNQT52wyYymz7LzQxBi10JqQwUh7lG9tQh3unpEvja+6GTH/QUwIDnDHTuPuEtSnWmSMiBdG6mSi95BS6yEeRhCyQ8R11xTWckAPt4P0xv5AUf2Ntsd+og4efSWVUCqEgTLb" StartModuleName="Main" DocumentationTableOrder="ByExecutionOrder" EditedBy="A\axelb" LastEdited="2026-04-20T09:52:47.3343363Z" ComplexityLevel="Beginner" Signature="YqDFYHlJeUGXKJXQmRPoAYoKngSqeERuDBn7cHgl+C0=">
   <Modules>
     <Module Name="Main" AutoRun="true" SelectedGroupName="Group 1">
       <Groups>
         <Group Name="Group 1">
           <Tables>
-            <Table Name="Imported table 1" Left="33" Top="71" Width="500" Height="300" IsMinimized="false" ActiveActionIndex="1" ViewMode="Table">
+            <Table Name="Imported table 1" Left="34" Top="112" Width="500" Height="300" IsMinimized="true" ActiveActionIndex="1" ViewMode="Table">
               <Actions>
                 <ImportSqlAction AutoStatus="true" QueryLocationType="VisualEditor">
                   <MetaColumns>
@@ -54,7 +54,7 @@
               </Actions>
               <AnalysisView Version="2" AppVersion="5.9.8.17" LayoutMode="Filters" />
             </Table>
-            <Table Name="public.aseguradora 1" Left="263" Top="867" Width="500" Height="300" IsMinimized="true" ActiveActionIndex="1" ViewMode="Table">
+            <Table Name="public.aseguradora 1" Left="167" Top="758" Width="500" Height="300" IsMinimized="true" ActiveActionIndex="1" ViewMode="Table">
               <Actions>
                 <ImportSqlAction QueryLocationType="VisualEditor">
                   <Query Version="7" AppVersion="5.9.8.17" QueryType="QueryBuilder" UseEmbeddedParameters="false" WindowWidth="1070" WindowHeight="600" QueryBuilderObjectsAreaWidth="255" QueryBuilderFiltersAreaHeight="250">
@@ -86,7 +86,7 @@
               </Actions>
               <AnalysisView Version="2" AppVersion="5.9.8.17" LayoutMode="Filters" />
             </Table>
-            <Table Name="public.detalle_factura 1" Left="0" Top="5" Width="496" Height="300" IsMinimized="false" ActiveActionIndex="1" ViewMode="Table">
+            <Table Name="public.detalle_factura 1" Left="8" Top="212" Width="496" Height="300" IsMinimized="true" ActiveActionIndex="1" ViewMode="Table">
               <Actions>
                 <ImportSqlAction QueryLocationType="VisualEditor">
                   <Query Version="7" AppVersion="5.9.8.17" QueryType="QueryBuilder" UseEmbeddedParameters="false" WindowWidth="1070" WindowHeight="600" QueryBuilderObjectsAreaWidth="255" QueryBuilderFiltersAreaHeight="250">
@@ -126,7 +126,7 @@
               </Actions>
               <AnalysisView Version="2" AppVersion="5.9.8.17" LayoutMode="Filters" />
             </Table>
-            <Table Name="public.especialidad 1" Left="253" Top="909" Width="500" Height="313" IsMinimized="true" ActiveActionIndex="1" ViewMode="Table">
+            <Table Name="public.especialidad 1" Left="199" Top="577" Width="500" Height="300" IsMinimized="false" ActiveActionIndex="1" ViewMode="Table">
               <Actions>
                 <ImportSqlAction QueryLocationType="VisualEditor">
                   <Query Version="7" AppVersion="5.9.8.17" QueryType="QueryBuilder" UseEmbeddedParameters="false" WindowWidth="1070" WindowHeight="600" QueryBuilderObjectsAreaWidth="255" QueryBuilderFiltersAreaHeight="250">
@@ -184,7 +184,7 @@
               </Actions>
               <AnalysisView Version="2" AppVersion="5.9.8.17" LayoutMode="Filters" />
             </Table>
-            <Table Name="public.factura 1" Left="3" Top="40" Width="500" Height="300" IsMinimized="false" ActiveActionIndex="1" ViewMode="Table">
+            <Table Name="public.factura 1" Left="137" Top="185" Width="500" Height="300" IsMinimized="true" ActiveActionIndex="1" ViewMode="Table">
               <Actions>
                 <ImportSqlAction QueryLocationType="VisualEditor">
                   <MetaColumns>
@@ -229,7 +229,7 @@
               </Actions>
               <AnalysisView Version="2" AppVersion="5.9.8.17" LayoutMode="Filters" />
             </Table>
-            <Table Name="public.forma_pago 1" Left="222" Top="936" Width="500" Height="300" IsMinimized="true" ActiveActionIndex="1" ViewMode="Table">
+            <Table Name="public.forma_pago 1" Left="390" Top="223" Width="500" Height="300" IsMinimized="true" ActiveActionIndex="1" ViewMode="Table">
               <Actions>
                 <ImportSqlAction QueryLocationType="VisualEditor">
                   <Query Version="7" AppVersion="5.9.8.17" QueryType="QueryBuilder" UseEmbeddedParameters="false" WindowWidth="1070" WindowHeight="600" QueryBuilderObjectsAreaWidth="255" QueryBuilderFiltersAreaHeight="250">
@@ -321,6 +321,38 @@
                 </ImportSqlAction>
                 <ExportDatasetAction AutoStatus="true" Mode="Local" FileExistsOption="Overwrite" EncryptColumns="false" AppendMode="AddNewColumns" ExportMode="CreateOrOverwrite">
                   <FileName Value="stg_medico_raw" Type="Path" />
+                </ExportDatasetAction>
+              </Actions>
+              <AnalysisView Version="2" AppVersion="5.9.8.17" LayoutMode="Filters" />
+            </Table>
+            <Table Name="public.paciente 1" Left="133" Top="377" Width="500" Height="300" IsMinimized="false" ActiveActionIndex="1" ViewMode="Table">
+              <Actions>
+                <ImportSqlAction QueryLocationType="VisualEditor">
+                  <Query Version="7" AppVersion="5.9.8.17" QueryType="QueryBuilder" UseEmbeddedParameters="false" WindowWidth="1070" WindowHeight="600" QueryBuilderObjectsAreaWidth="255" QueryBuilderFiltersAreaHeight="250">
+                    <DataConnectorDefinition IsShared="true" Type="List" Name="ProyectoBI" />
+                    <QueryModel WhereConditionType="ConditionBuilder" HavingConditionType="ConditionBuilder" SelectAllRows="true" UseDistinct="false" AutoPreview="true" PreviewRows="100" PreFilterColumnValues="true">
+                      <TableName Value="public.paciente" Type="List" />
+                      <SelectItems>
+                        <SqlSelectItem Type="Column" Name="id_paciente" ColumnType="Number" />
+                        <SqlSelectItem Type="Column" Name="edad" ColumnType="Number" />
+                        <SqlSelectItem Type="Column" Name="sexo" ColumnType="Text" />
+                        <SqlSelectItem Type="Column" Name="id_tipo_cliente" ColumnType="Number" />
+                      </SelectItems>
+                      <Expressions />
+                      <WhereConditionTree />
+                      <HavingConditionTree />
+                      <KnownDataTypes>
+                        <Item Name="id_paciente" IsExpression="false" DataType="Number" />
+                        <Item Name="edad" IsExpression="false" DataType="Number" />
+                        <Item Name="sexo" IsExpression="false" DataType="Text" />
+                        <Item Name="id_tipo_cliente" IsExpression="false" DataType="Number" />
+                      </KnownDataTypes>
+                    </QueryModel>
+                    <Parameters />
+                  </Query>
+                </ImportSqlAction>
+                <ExportDatasetAction AutoStatus="true" Mode="Local" FileExistsOption="Overwrite" EncryptColumns="false" AppendMode="AddNewColumns" ExportMode="CreateOrOverwrite">
+                  <FileName Value="stg_paciente_raw" Type="Path" />
                 </ExportDatasetAction>
               </Actions>
               <AnalysisView Version="2" AppVersion="5.9.8.17" LayoutMode="Filters" />

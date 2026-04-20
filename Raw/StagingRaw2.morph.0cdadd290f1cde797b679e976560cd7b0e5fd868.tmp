@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project Version="29" AppVersion="5.9.8.17" ReadKey="readkey.DWyEv4wrkwo=.DzKa/4cvE/H9u6PvKFbxfg==.48UpJ8bZfSJJ0putysBrhsXgn/5EcB+vnwTQCgv1qX1sg9TLPqkgjyPwhpdf6s1/W3i9+K0DmAEcG/bDkalg1oGALrhEYxCkdvcHdai9kqY=.oOBjh9j9PVtvgyOrth84YcorKgD6c0v/Ono7xx4l79k=." WriteKeyPublic="BgIAAACkAABSU0ExAAgAAAEAAQB5kQwcdvMjdfN7mzu7LkEQFqI+m2YHIjWRT62vH5Zw+JHQ0bJBk6R6Znk3wTOEeZYvr/nH9cEzx18OMv2bGM4BK/P/clYGFvi0NtTtnaLNFLEFp008gEBaCuZcy6t6A1QTuKf4mdSnK/uYgBrI6Vzo4LiSZ4WGf22j2lmsHqwv/Z+5IMahVflyNSrzEXTkH1gqPHkqcQFapQlfrY4n4O6K7278OKxTuZ1eXDNNl7sbiLBAMDJ43FTeLj6lko3tUZKKupvjmp4KKyVFp8H0P4pEA4Do1RcK++9uzG5FdZAx3YtqP4HCYkDNfZZ1xFrDJro0WGYuC21QqxL+c8HS0xTs" StartModuleName="Main" DocumentationTableOrder="ByExecutionOrder" EditedBy="A\axelb" LastEdited="2026-04-20T04:19:23.8757967Z" ComplexityLevel="Beginner" Signature="NtybleIKemEA+govuf1Yp/jfD/uUU3DnR/wznXWax2c=">
+<Project Version="29" AppVersion="5.9.8.17" ReadKey="readkey.1Yn3GH9HiQ0=.KG5Wb35974ZFipYXHLUYHA==.fLzaOuABGlFCNVaw4K52EIvVIZTLwGjqJrd0kiK7emXwtzbsbNhSETdoeDZ8qOdWl14d/VVXCfvcTAaXfCt/hXo4aopQ6U3ruVGUQHKr1xM=.oIPd8UcBzDPZULnzJEfX4zsuQM8wSraym/t2ZL/ZMtI=." WriteKeyPublic="BgIAAACkAABSU0ExAAgAAAEAAQDBAlxy27gq7VCnc3Qz/8KbTj7tYqZHQhOUSutHdV3Lo2AoBIF1eWmgTJYmymYeCp5yiT9r5xX4qm1vKgRXCwK+04QlHKUPzZy8H7Qbr/KXv4prCbA3TyFlCn4db1+CCLh2IztaLdoZeS1di7/EagcjEN4eVIBPnYVm0QMGcqrN43BWaIw05qDdQqfHN7urImZ5MMxOyU+hzNpzIqQGU4mHKg19TbmwMyCHNSpi600fGQGl7Fbf27ZEZMtAL5Zkj7bIYwIZWjEH6i5hpB1wsz2OGTDHOr0mEyPrnwSw4l20O0RYQ7aF90tSjO4EDMU1GC4HAueVDrqtD/uI+uz2FuTE" StartModuleName="Main" DocumentationTableOrder="ByExecutionOrder" EditedBy="A\axelb" LastEdited="2026-04-20T05:34:41.5468232Z" ComplexityLevel="Beginner" Signature="e/pva1B/OUJIZFtlCDiGRviCNa8iFmdqm5koJ5CyKX4=">
   <Modules>
     <Module Name="Main" AutoRun="true" SelectedGroupName="Group 1">
       <Groups>
         <Group Name="Group 1">
           <Tables>
-            <Table Name="public.paciente 1" Left="495" Top="37" Width="500" Height="300" IsMinimized="false" ActiveActionIndex="1" ViewMode="Table">
+            <Table Name="public.paciente 1" Left="55" Top="624" Width="500" Height="300" IsMinimized="false" ActiveActionIndex="1" ViewMode="Table">
               <Actions>
                 <ImportSqlAction QueryLocationType="VisualEditor">
                   <Query Version="7" AppVersion="5.9.8.17" QueryType="QueryBuilder" UseEmbeddedParameters="false" WindowWidth="1070" WindowHeight="600" QueryBuilderObjectsAreaWidth="255" QueryBuilderFiltersAreaHeight="250">
@@ -21,6 +21,12 @@
                       <Expressions />
                       <WhereConditionTree />
                       <HavingConditionTree />
+                      <KnownDataTypes>
+                        <Item Name="id_paciente" IsExpression="false" DataType="Number" />
+                        <Item Name="edad" IsExpression="false" DataType="Number" />
+                        <Item Name="sexo" IsExpression="false" DataType="Text" />
+                        <Item Name="id_tipo_cliente" IsExpression="false" DataType="Number" />
+                      </KnownDataTypes>
                     </QueryModel>
                     <Parameters />
                   </Query>
@@ -31,11 +37,11 @@
               </Actions>
               <AnalysisView Version="2" AppVersion="5.9.8.17" LayoutMode="Filters" />
             </Table>
-            <Table Name="public.procedimiento 1" Left="537" Top="396" Width="500" Height="300" IsMinimized="false" ActiveActionIndex="1" ViewMode="Table">
+            <Table Name="public.procedimiento 1" Left="89" Top="154" Width="500" Height="300" IsMinimized="false" ActiveActionIndex="1" ViewMode="Table">
               <Actions>
                 <ImportSqlAction QueryLocationType="VisualEditor">
                   <MetaColumns>
-                    <MetaColumn OriginalName="fecha" Format="DateDDMMMYYYY" FormatOrigin="Autodetected" />
+                    <MetaColumn OriginalName="fecha" />
                   </MetaColumns>
                   <Query Version="7" AppVersion="5.9.8.17" QueryType="QueryBuilder" UseEmbeddedParameters="false" WindowWidth="1070" WindowHeight="600" QueryBuilderObjectsAreaWidth="255" QueryBuilderFiltersAreaHeight="250">
                     <DataConnectorDefinition IsShared="true" Type="List" Name="ProyectoBI" />
@@ -56,6 +62,18 @@
                       <Expressions />
                       <WhereConditionTree />
                       <HavingConditionTree />
+                      <KnownDataTypes>
+                        <Item Name="id_procedimiento" IsExpression="false" DataType="Number" />
+                        <Item Name="fecha" IsExpression="false" DataType="Date" />
+                        <Item Name="id_cita" IsExpression="false" DataType="Number" />
+                        <Item Name="id_paciente" IsExpression="false" DataType="Number" />
+                        <Item Name="id_medico" IsExpression="false" DataType="Number" />
+                        <Item Name="id_sede" IsExpression="false" DataType="Number" />
+                        <Item Name="id_servicio" IsExpression="false" DataType="Number" />
+                        <Item Name="id_aseguradora" IsExpression="false" DataType="Number" />
+                        <Item Name="cantidad" IsExpression="false" DataType="Number" />
+                        <Item Name="observaciones" IsExpression="false" DataType="Text" />
+                      </KnownDataTypes>
                     </QueryModel>
                     <Parameters />
                   </Query>
@@ -66,7 +84,7 @@
               </Actions>
               <AnalysisView Version="2" AppVersion="5.9.8.17" LayoutMode="Filters" />
             </Table>
-            <Table Name="public.sede 1" Left="89" Top="65" Width="500" Height="300" IsMinimized="false" ActiveActionIndex="1" ViewMode="Table">
+            <Table Name="public.sede 1" Left="299" Top="1010" Width="500" Height="300" IsMinimized="true" ActiveActionIndex="1" ViewMode="Table">
               <Actions>
                 <ImportSqlAction QueryLocationType="VisualEditor">
                   <Query Version="7" AppVersion="5.9.8.17" QueryType="QueryBuilder" UseEmbeddedParameters="false" WindowWidth="1070" WindowHeight="600" QueryBuilderObjectsAreaWidth="255" QueryBuilderFiltersAreaHeight="250">
@@ -83,6 +101,13 @@
                       <Expressions />
                       <WhereConditionTree />
                       <HavingConditionTree />
+                      <KnownDataTypes>
+                        <Item Name="id_sede" IsExpression="false" DataType="Number" />
+                        <Item Name="nombre" IsExpression="false" DataType="Text" />
+                        <Item Name="provincia" IsExpression="false" DataType="Text" />
+                        <Item Name="region" IsExpression="false" DataType="Text" />
+                        <Item Name="tipo_sede" IsExpression="false" DataType="Text" />
+                      </KnownDataTypes>
                     </QueryModel>
                     <Parameters />
                   </Query>
@@ -93,7 +118,7 @@
               </Actions>
               <AnalysisView Version="2" AppVersion="5.9.8.17" LayoutMode="Filters" />
             </Table>
-            <Table Name="public.servicio 1" Left="224" Top="270" Width="500" Height="300" IsMinimized="false" ActiveActionIndex="1" ViewMode="Table">
+            <Table Name="public.servicio 1" Left="21" Top="55" Width="500" Height="297" IsMinimized="false" ActiveActionIndex="1" ViewMode="Table">
               <Actions>
                 <ImportSqlAction QueryLocationType="VisualEditor">
                   <Query Version="7" AppVersion="5.9.8.17" QueryType="QueryBuilder" UseEmbeddedParameters="false" WindowWidth="1070" WindowHeight="600" QueryBuilderObjectsAreaWidth="255" QueryBuilderFiltersAreaHeight="250">
@@ -112,6 +137,15 @@
                       <Expressions />
                       <WhereConditionTree />
                       <HavingConditionTree />
+                      <KnownDataTypes>
+                        <Item Name="id_servicio" IsExpression="false" DataType="Number" />
+                        <Item Name="nombre" IsExpression="false" DataType="Text" />
+                        <Item Name="id_tipo_servicio" IsExpression="false" DataType="Number" />
+                        <Item Name="id_especialidad" IsExpression="false" DataType="Number" />
+                        <Item Name="tarifa_referencia" IsExpression="false" DataType="Number" />
+                        <Item Name="costo_referencia" IsExpression="false" DataType="Number" />
+                        <Item Name="activo" IsExpression="false" DataType="Boolean" />
+                      </KnownDataTypes>
                     </QueryModel>
                     <Parameters />
                   </Query>
@@ -122,7 +156,7 @@
               </Actions>
               <AnalysisView Version="2" AppVersion="5.9.8.17" LayoutMode="Filters" />
             </Table>
-            <Table Name="public.tipo_cliente 1" Left="761" Top="418" Width="500" Height="300" IsMinimized="false" ActiveActionIndex="1" ViewMode="Table">
+            <Table Name="public.tipo_cliente 1" Left="260" Top="1024" Width="500" Height="300" IsMinimized="true" ActiveActionIndex="1" ViewMode="Table">
               <Actions>
                 <ImportSqlAction QueryLocationType="VisualEditor">
                   <Query Version="7" AppVersion="5.9.8.17" QueryType="QueryBuilder" UseEmbeddedParameters="false" WindowWidth="1070" WindowHeight="600" QueryBuilderObjectsAreaWidth="255" QueryBuilderFiltersAreaHeight="250">
@@ -136,6 +170,10 @@
                       <Expressions />
                       <WhereConditionTree />
                       <HavingConditionTree />
+                      <KnownDataTypes>
+                        <Item Name="id_tipo_cliente" IsExpression="false" DataType="Number" />
+                        <Item Name="descripcion" IsExpression="false" DataType="Text" />
+                      </KnownDataTypes>
                     </QueryModel>
                     <Parameters />
                   </Query>
@@ -146,7 +184,7 @@
               </Actions>
               <AnalysisView Version="2" AppVersion="5.9.8.17" LayoutMode="Filters" />
             </Table>
-            <Table Name="public.tipo_servicio 1" Left="821" Top="166" Width="500" Height="300" IsMinimized="false" ActiveActionIndex="1" ViewMode="Table">
+            <Table Name="public.tipo_servicio 1" Left="272" Top="1017" Width="500" Height="300" IsMinimized="true" ActiveActionIndex="1" ViewMode="Table">
               <Actions>
                 <ImportSqlAction QueryLocationType="VisualEditor">
                   <Query Version="7" AppVersion="5.9.8.17" QueryType="QueryBuilder" UseEmbeddedParameters="false" WindowWidth="1070" WindowHeight="600" QueryBuilderObjectsAreaWidth="255" QueryBuilderFiltersAreaHeight="250">
@@ -160,6 +198,10 @@
                       <Expressions />
                       <WhereConditionTree />
                       <HavingConditionTree />
+                      <KnownDataTypes>
+                        <Item Name="id_tipo_servicio" IsExpression="false" DataType="Number" />
+                        <Item Name="descripcion" IsExpression="false" DataType="Text" />
+                      </KnownDataTypes>
                     </QueryModel>
                     <Parameters />
                   </Query>

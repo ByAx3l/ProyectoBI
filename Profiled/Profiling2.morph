@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Version="29" AppVersion="5.9.8.17" ReadKey="readkey.NrMZj++5Dao=.YV7OZ8IlZGNzsSFEYbjNGA==.WAg0NrQimPsTz0Be01L7b/ODnPdEOBFhrjVqRa/XfdQacnxJUMC2wZyVCZP0xDH2TyvF5NZuAZlzMPXHcXJ7ljPRNhn1MilgfpUzJVoXOkM=.zrsWBe/EM/0kEA61bE7JndDPWB5YYv9PpvB3idAW9lw=." WriteKeyPublic="BgIAAACkAABSU0ExAAgAAAEAAQBV1kRYFjYFhmYKlOvAxWaM4BE3PNdXx8z43AfsAVtyhdsiBPHILfWpqoug8vYdBRoo9Qqwo2EE29Z+vLpihb5WXromc6gRukCyemo4iphn1uNaNBEWF5kuL7AtmKVKMhNjGFZ4D6QXoRqs+wYVrTEYLEi7B90tov/1E4WbrRIKqUS6gf7rKmBGWe8MWqcJJjmlBLbiO/gkLyfh3T4UIJStaCx65yR2xXPfjbLICdSYGQGfUWZn09+cgjoCEDoJ7frjPQ6NNaLb05W+N0tldlcvnHottLBnUqyV92r4jnIvxSr4ochf2YLRlxS03Vich0wH/vq8Xy+SsGELvDOX5KSy" StartModuleName="Main" DocumentationTableOrder="ByExecutionOrder" EditedBy="A\axelb" LastEdited="2026-04-20T10:18:57.4031356Z" ComplexityLevel="Beginner" Signature="TwY3x2Mpx0+ddTtNhuAO0CvHyXvqt76YuAE4UykexjU=">
+  <Modules>
+    <Module Name="Main" AutoRun="true" SelectedGroupName="Group 1">
+      <Groups>
+        <Group Name="Group 1">
+          <Tables>
+            <Table Name="stg_detalle_factura_raw.dset" Left="177" Top="121" Width="499" Height="291" IsMinimized="false" ActiveActionIndex="1" ViewMode="Table">
+              <Actions>
+                <ImportDatasetAction AutoStatus="true" Mode="Local" ImportMode="Data" LoadAllColumns="true">
+                  <InputFileDefinition Mode="Single">
+                    <FileName Value="C:\Users\axelb\OneDrive\Escritorio\ProyectoBI\ProyectoBI\Raw\stg_detalle_factura_raw.dset" Type="Path" />
+                  </InputFileDefinition>
+                </ImportDatasetAction>
+                <AddColumnsAction ColumnExistsOption="Rename">
+                  <Columns>
+                    <NameExpressionPair Name="flag_nulls">
+                      <Expression Value="if(&#xD;&#xA;  isempty([id_cita]) OR &#xD;&#xA;  isempty([id_detalle_factura]) OR &#xD;&#xA;  isempty([id_factura]) OR &#xD;&#xA;  isempty([id_procedimiento]) OR &#xD;&#xA;  isempty([id_servicio]), &#xD;&#xA;  &quot;ERROR&quot;, &#xD;&#xA;  &quot;OK&quot;&#xD;&#xA;)" Type="Expression" />
+                    </NameExpressionPair>
+                    <NameExpressionPair Name="flag_numero">
+                      <Expression Value="if(&#xD;&#xA;  (IsNumber([precio_unitario])) or (IsNumeric([precio_unitario])) and&#xD;&#xA;  (IsNumber([subtotal_linea])) or (IsNumeric([subtotal_linea])),&#xD;&#xA; &quot;OK&quot;, &quot;ERROR&quot;)" Type="Expression" />
+                    </NameExpressionPair>
+                    <NameExpressionPair Name="flag_tipo_invalido">
+                      <Expression Value="if(&#xD;&#xA;  [flag_numero] = &quot;ERROR&quot;,&#xD;&#xA;  &quot;ERROR&quot;,&#xD;&#xA;  &quot;OK&quot;&#xD;&#xA;)" Type="Expression" />
+                    </NameExpressionPair>
+                  </Columns>
+                  <InsertPosition Position="Rightmost" />
+                </AddColumnsAction>
+                <ExportDatasetAction AutoStatus="true" Mode="Local" FileExistsOption="Overwrite" EncryptColumns="false" AppendMode="AddNewColumns" ExportMode="CreateOrOverwrite">
+                  <FileName Value="stg_detalle_factura_profiled.dset" Type="Path" />
+                </ExportDatasetAction>
+              </Actions>
+              <AnalysisView Version="2" AppVersion="5.9.8.17" LayoutMode="Filters" />
+            </Table>
+            <Table Name="stg_detalle_factura_raw.dset (2)" Left="760" Top="138" Width="500" Height="300" IsMinimized="true" ActiveActionIndex="1" ViewMode="Table">
+              <Actions>
+                <DeriveTableAction SourceTableName="stg_detalle_factura_raw.dset" IsConditional="false" />
+                <AggregateAction>
+                  <AggregateColumns>
+                    <AggregateColumn ColumnName="id_detalle_factura" Aggregation="Sum" />
+                  </AggregateColumns>
+                  <GroupColumns>
+                    <Item>id_detalle_factura</Item>
+                    <Item>id_factura</Item>
+                  </GroupColumns>
+                </AggregateAction>
+              </Actions>
+              <AnalysisView Version="2" AppVersion="5.9.8.17" LayoutMode="Filters" />
+            </Table>
+            <Table Name="stg_detalle_factura_raw.dset (3)" Left="749" Top="253" Width="500" Height="260" IsMinimized="true" ActiveActionIndex="1" ViewMode="Table">
+              <Actions>
+                <DeriveTableAction SourceTableName="stg_detalle_factura_raw.dset" IsConditional="false" />
+                <MetadataAction TableName="false" TotalRows="true" TotalColumns="true" ColumnNames="false" DistinctCount="false" AllUnique="false" EmptyCount="false" ErrorCount="false" TextCount="false" NumberCount="false" IntegerCount="false" NonIntegerCount="false" MinNumber="false" MaxNumber="false" MinTextLength="false" MaxTextLength="false" OriginalName="false" NumberFormat="false" Annotation="false" VocabularySymbolCount="false" IsVocabularyExact="false" HasNothing="false" />
+              </Actions>
+              <AnalysisView Version="2" AppVersion="5.9.8.17" LayoutMode="Filters" />
+            </Table>
+            <Table Name="stg_detalle_factura_raw.dset (4)" Left="767" Top="10" Width="500" Height="313" IsMinimized="true" ActiveActionIndex="1" ViewMode="Table">
+              <Actions>
+                <DeriveTableAction SourceTableName="stg_detalle_factura_raw.dset" IsConditional="false" />
+                <KeepDuplicatesAction CompareAllColumns="false">
+                  <ColumnNames>
+                    <Item>id_detalle_factura</Item>
+                    <Item>id_factura</Item>
+                    <Item>id_cita</Item>
+                  </ColumnNames>
+                </KeepDuplicatesAction>
+              </Actions>
+              <AnalysisView Version="2" AppVersion="5.9.8.17" LayoutMode="Filters" />
+            </Table>
+            <Table Name="stg_factura_raw.dset" Left="200" Top="554" Width="342" Height="296" IsMinimized="false" ActiveActionIndex="1" ViewMode="Table">
+              <Actions>
+                <ImportDatasetAction AutoStatus="true" Mode="Local" ImportMode="Data" LoadAllColumns="true">
+                  <MetaColumns>
+                    <MetaColumn OriginalName="fecha" />
+                  </MetaColumns>
+                  <InputFileDefinition Mode="Single">
+                    <FileName Value="C:\Users\axelb\OneDrive\Escritorio\ProyectoBI\ProyectoBI\Raw\stg_factura_raw.dset" Type="Path" />
+                  </InputFileDefinition>
+                </ImportDatasetAction>
+                <AddColumnsAction ColumnExistsOption="Rename">
+                  <Columns>
+                    <NameExpressionPair Name="flag_nulls">
+                      <Expression Value="if(&#xD;&#xA;  isempty([id_factura]) OR &#xD;&#xA;  isempty([id_paciente]) OR &#xD;&#xA;  isempty([numero_factura]) OR&#xD;&#xA;  isempty([id_aseguradora]) OR  &#xD;&#xA;  isempty([total]), &#xD;&#xA;  &quot;ERROR&quot;, &#xD;&#xA;  &quot;OK&quot;&#xD;&#xA;)" Type="Expression" />
+                    </NameExpressionPair>
+                    <NameExpressionPair Name="flag_numero">
+                      <Expression Value="if(&#xD;&#xA;  (IsNumber([impuesto])) or (IsNumeric([impuesto])) and&#xD;&#xA;  (IsNumber([subtotal])) or (IsNumeric([subtotal])) and&#xD;&#xA;  (IsNumber([total])) or (IsNumeric([total])),&#xD;&#xA; &quot;OK&quot;, &quot;ERROR&quot;)" Type="Expression" />
+                    </NameExpressionPair>
+                    <NameExpressionPair Name="flag_fecha">
+                      <Expression Value="if(IsTextDate([fecha]), &quot;ERROR&quot;, &quot;OK&quot;)" Type="Expression" />
+                    </NameExpressionPair>
+                    <NameExpressionPair Name="flag_tipo_invalido">
+                      <Expression Value="if(&#xD;&#xA;  [flag_numero] = &quot;ERROR&quot; or&#xD;&#xA;  [flag_fecha] = &quot;ERROR&quot;,&#xD;&#xA;  &quot;ERROR&quot;,&#xD;&#xA;  &quot;OK&quot;&#xD;&#xA;)" Type="Expression" />
+                    </NameExpressionPair>
+                  </Columns>
+                  <InsertPosition Position="Rightmost" />
+                </AddColumnsAction>
+                <ExportDatasetAction AutoStatus="true" Mode="Local" FileExistsOption="Overwrite" EncryptColumns="false" AppendMode="AddNewColumns" ExportMode="CreateOrOverwrite">
+                  <FileName Value="stg_factura_profiled.dset" Type="Path" />
+                </ExportDatasetAction>
+              </Actions>
+              <AnalysisView Version="2" AppVersion="5.9.8.17" LayoutMode="Filters" />
+            </Table>
+            <Table Name="stg_factura_raw.dset (2)" Left="625" Top="553" Width="495" Height="300" IsMinimized="true" ActiveActionIndex="1" ViewMode="Table">
+              <Actions>
+                <DeriveTableAction SourceTableName="stg_factura_raw.dset" IsConditional="false" />
+                <AggregateAction>
+                  <AggregateColumns>
+                    <AggregateColumn ColumnName="id_factura" Aggregation="Sum" />
+                  </AggregateColumns>
+                  <GroupColumns>
+                    <Item>numero_factura</Item>
+                  </GroupColumns>
+                </AggregateAction>
+              </Actions>
+              <AnalysisView Version="2" AppVersion="5.9.8.17" LayoutMode="Filters" />
+            </Table>
+            <Table Name="stg_factura_raw.dset (3)" Left="598" Top="657" Width="500" Height="300" IsMinimized="true" ActiveActionIndex="1" ViewMode="Table">
+              <Actions>
+                <DeriveTableAction SourceTableName="stg_factura_raw.dset" IsConditional="false" />
+                <MetadataAction TableName="false" TotalRows="true" TotalColumns="true" ColumnNames="false" DistinctCount="false" AllUnique="false" EmptyCount="false" ErrorCount="false" TextCount="false" NumberCount="false" IntegerCount="false" NonIntegerCount="false" MinNumber="false" MaxNumber="false" MinTextLength="false" MaxTextLength="false" OriginalName="false" NumberFormat="false" Annotation="false" VocabularySymbolCount="false" IsVocabularyExact="false" HasNothing="false" />
+              </Actions>
+              <AnalysisView Version="2" AppVersion="5.9.8.17" LayoutMode="Filters" />
+            </Table>
+            <Table Name="stg_factura_raw.dset (4)" Left="610" Top="427" Width="500" Height="300" IsMinimized="true" ActiveActionIndex="1" ViewMode="Table">
+              <Actions>
+                <DeriveTableAction SourceTableName="stg_factura_raw.dset" IsConditional="false" />
+                <KeepDuplicatesAction CompareAllColumns="false">
+                  <ColumnNames>
+                    <Item>id_factura</Item>
+                    <Item>numero_factura</Item>
+                  </ColumnNames>
+                </KeepDuplicatesAction>
+              </Actions>
+              <AnalysisView Version="2" AppVersion="5.9.8.17" LayoutMode="Filters" />
+            </Table>
+          </Tables>
+        </Group>
+      </Groups>
+      <Parameters />
+      <Report UseCustomFileNameForPdfExport="false" ShowPageBorders="true">
+        <Pages>
+          <Page Name="Page 1" IncludeInReport="true">
+            <ReportObjects />
+          </Page>
+        </Pages>
+        <PageSetup Orientation="Landscape" Margin="Narrow" Size="Letter" />
+      </Report>
+    </Module>
+  </Modules>
+  <ProtectedDataConnectors />
+  <Resources />
+</Project>
