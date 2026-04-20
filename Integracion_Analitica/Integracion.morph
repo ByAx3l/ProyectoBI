@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Version="29" AppVersion="5.9.8.17" ReadKey="readkey.kcgLPAbHsso=.HpXaqOxiXYByIxwlCbvNug==.VEIfeEtCasFJjGKyhkhIH/AmwO2UWJTnblMySDGZMkGSQpkxE2o2FAZBK0h9PgJLlSGEcroQOTZQEtUgjCayhd/u/DzU915tYMFIfS5zU0Q=.x0UjKbH/4DrDQ5b+XDppexqwUctBAwpSQ6pPINF9zsw=." WriteKeyPublic="BgIAAACkAABSU0ExAAgAAAEAAQAhaMZ3xsplGtSI35Ig3CXY3goHOJFOt7La/adiIA+cML2TvzRTvTt4vojD8WuN2vopahhz6HXiZOTEuzFHswyDxnjN1ZM928A4YiAx4KEAiP65kwrB5O6SF9zWJmCw6qBRjRq7fwX/BJUhGRATF/hsVcdnQ23VkI4PPDH2xIR1ErTjukIgliv2K8hSY/WK3+ym/5hqCk8PDUncde8GHpfy9geiHAdkZqrz2tgqmvmudNK1odzHzJRI9D7lBLt6ADZrFyO0L5ZaIWUH3OItN3kNbzQ4Uc0AA9nnBe896XaE0QG/eZNqR4CHNEunzpiX/ZDPPxqUawRF8iwyJzGIXQic" StartModuleName="Main" DocumentationTableOrder="ByExecutionOrder" EditedBy="A\axelb" LastEdited="2026-04-20T13:47:49.3992308Z" ComplexityLevel="Beginner" Signature="gEuRARnmk9px+nQVq3jV1A3V3xAdXcTCwBaWBeabkFg=">
+  <Modules>
+    <Module Name="Main" AutoRun="true" SelectedGroupName="Group 1">
+      <Groups>
+        <Group Name="Group 1">
+          <Tables>
+            <Table Name="stg_cita_validated.dset" Left="137" Top="488" Width="500" Height="300" IsMinimized="false" ActiveActionIndex="0" ViewMode="Table">
+              <Actions>
+                <ImportDatasetAction AutoStatus="true" Mode="Local" ImportMode="Data" LoadAllColumns="true">
+                  <MetaColumns>
+                    <MetaColumn OriginalName="fecha" />
+                  </MetaColumns>
+                  <InputFileDefinition Mode="Single">
+                    <FileName Value="C:\Users\axelb\OneDrive\Escritorio\ProyectoBI\ProyectoBI\Validated\stg_cita_validated.dset" Type="Path" />
+                  </InputFileDefinition>
+                </ImportDatasetAction>
+              </Actions>
+              <AnalysisView Version="2" AppVersion="5.9.8.17" LayoutMode="Filters" />
+            </Table>
+            <Table Name="stg_detalle_factura_validated.dset" Left="64" Top="74" Width="500" Height="299" IsMinimized="false" ActiveActionIndex="6" ViewMode="Table">
+              <Actions>
+                <ImportDatasetAction AutoStatus="true" Mode="Local" ImportMode="Data" LoadAllColumns="true">
+                  <InputFileDefinition Mode="Single">
+                    <FileName Value="C:\Users\axelb\OneDrive\Escritorio\ProyectoBI\ProyectoBI\Validated\stg_detalle_factura_validated.dset" Type="Path" />
+                  </InputFileDefinition>
+                </ImportDatasetAction>
+                <MergeAction SecondTableName="stg_procedimiento_validated.dset" SecondTableExists="true" MergeMode="LeftJoin">
+                  <Columns>
+                    <Item>fecha</Item>
+                    <Item>id_paciente</Item>
+                    <Item>id_medico</Item>
+                    <Item>id_sede</Item>
+                    <Item>id_aseguradora</Item>
+                    <Item>observaciones</Item>
+                  </Columns>
+                  <MatchingColumns>
+                    <NamePair Name1="id_procedimiento" Name2="id_procedimiento" />
+                  </MatchingColumns>
+                </MergeAction>
+                <MergeAction SecondTableName="stg_factura_validated.dset" SecondTableExists="true" MergeMode="LeftJoin">
+                  <Columns>
+                    <Item>numero_factura</Item>
+                    <Item>id_forma_pago</Item>
+                    <Item>subtotal</Item>
+                    <Item>impuesto</Item>
+                    <Item>total</Item>
+                  </Columns>
+                  <MatchingColumns>
+                    <NamePair Name1="id_factura" Name2="id_factura" />
+                  </MatchingColumns>
+                </MergeAction>
+                <MergeAction SecondTableName="stg_servicio_raw.dset" SecondTableExists="true" MergeMode="LeftJoin">
+                  <Columns>
+                    <Item>nombre</Item>
+                    <Item>id_tipo_servicio</Item>
+                    <Item>id_especialidad</Item>
+                    <Item>tarifa_referencia</Item>
+                    <Item>costo_referencia</Item>
+                  </Columns>
+                  <MatchingColumns>
+                    <NamePair Name1="id_servicio" Name2="id_servicio" />
+                  </MatchingColumns>
+                </MergeAction>
+                <MergeAction SecondTableName="stg_cita_validated.dset" SecondTableExists="true" MergeMode="FullJoin">
+                  <Columns>
+                    <Item>id_cita</Item>
+                    <Item>hora_programada</Item>
+                    <Item>id_estado</Item>
+                    <Item>id_franja</Item>
+                  </Columns>
+                  <MatchingColumns>
+                    <NamePair Name1="id_cita" Name2="id_cita" />
+                  </MatchingColumns>
+                </MergeAction>
+                <KeepRemoveColumnsAction Mode="Remove" FailIfColumnsNotFound="false">
+                  <ColumnNames>
+                    <Item>id_cita</Item>
+                  </ColumnNames>
+                </KeepRemoveColumnsAction>
+                <RenameColumnsAction>
+                  <Names>
+                    <NamePair Name1="id_cita(2)" Name2="id_cita" />
+                  </Names>
+                </RenameColumnsAction>
+                <ExportDatasetAction AutoStatus="true" Mode="Local" FileExistsOption="Overwrite" EncryptColumns="false" AppendMode="AddNewColumns" ExportMode="CreateOrOverwrite">
+                  <FileName Value="stg_integrado_analitico" Type="Path" />
+                </ExportDatasetAction>
+              </Actions>
+              <AnalysisView Version="2" AppVersion="5.9.8.17" LayoutMode="Filters" />
+            </Table>
+            <Table Name="stg_factura_validated.dset" Left="818" Top="72" Width="500" Height="300" IsMinimized="false" ActiveActionIndex="0" ViewMode="Table">
+              <Actions>
+                <ImportDatasetAction AutoStatus="true" Mode="Local" ImportMode="Data" LoadAllColumns="true">
+                  <MetaColumns>
+                    <MetaColumn OriginalName="fecha" />
+                  </MetaColumns>
+                  <InputFileDefinition Mode="Single">
+                    <FileName Value="C:\Users\axelb\OneDrive\Escritorio\ProyectoBI\ProyectoBI\Validated\stg_factura_validated.dset" Type="Path" />
+                  </InputFileDefinition>
+                </ImportDatasetAction>
+              </Actions>
+              <AnalysisView Version="2" AppVersion="5.9.8.17" LayoutMode="Filters" />
+            </Table>
+            <Table Name="stg_procedimiento_validated.dset" Left="828" Top="493" Width="500" Height="300" IsMinimized="false" ActiveActionIndex="0" ViewMode="Table">
+              <Actions>
+                <ImportDatasetAction AutoStatus="true" Mode="Local" ImportMode="Data" LoadAllColumns="true">
+                  <MetaColumns>
+                    <MetaColumn OriginalName="fecha" />
+                  </MetaColumns>
+                  <InputFileDefinition Mode="Single">
+                    <FileName Value="C:\Users\axelb\OneDrive\Escritorio\ProyectoBI\ProyectoBI\Validated\stg_procedimiento_validated.dset" Type="Path" />
+                  </InputFileDefinition>
+                </ImportDatasetAction>
+              </Actions>
+              <AnalysisView Version="2" AppVersion="5.9.8.17" LayoutMode="Filters" />
+            </Table>
+            <Table Name="stg_servicio_raw.dset" Left="1357" Top="148" Width="500" Height="300" IsMinimized="false" ActiveActionIndex="0" ViewMode="Table">
+              <Actions>
+                <ImportDatasetAction AutoStatus="true" Mode="Local" ImportMode="Data" LoadAllColumns="true">
+                  <InputFileDefinition Mode="Single">
+                    <FileName Value="C:\Users\axelb\OneDrive\Escritorio\ProyectoBI\ProyectoBI\Raw\stg_servicio_raw.dset" Type="Path" />
+                  </InputFileDefinition>
+                </ImportDatasetAction>
+              </Actions>
+              <AnalysisView Version="2" AppVersion="5.9.8.17" LayoutMode="Filters" />
+            </Table>
+          </Tables>
+        </Group>
+      </Groups>
+      <Parameters />
+      <Report UseCustomFileNameForPdfExport="false" ShowPageBorders="true">
+        <Pages>
+          <Page Name="Page 1" IncludeInReport="true">
+            <ReportObjects />
+          </Page>
+        </Pages>
+        <PageSetup Orientation="Landscape" Margin="Narrow" Size="Letter" />
+      </Report>
+    </Module>
+  </Modules>
+  <ProtectedDataConnectors />
+  <Resources />
+</Project>

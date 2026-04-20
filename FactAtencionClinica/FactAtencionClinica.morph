@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Version="29" AppVersion="5.9.8.17" ReadKey="readkey.bSyi4NbFqEM=.Yg+qvBhJWAApLeEioXSQJA==.0sri4ub/SUSUMDe/gkk1xcRplP05l+wBxALSI9IbpAMBhtmVVKohFrS9GWuW4lflJiE2Q1Y0ePWm8ZyEia44ARwp4Jyop+GvK+o+7ghrTFQ=.SEXeZn548jo9J97Nt/ghxbcJptY3byYJ7nncSBGUJb8=." WriteKeyPublic="BgIAAACkAABSU0ExAAgAAAEAAQDp5rKOj6ih4iJ675qZP1zluibV5nI9HS/RZHyHZmYs0Aa0c3ckiatKs+9D8ubHrn8UnpzHy090F06yNHEBBIPEQI1X5bMNJQXNsdDaVNjYze+R8p49YfCXt5syZ7Elascy7bLodAXf9rlsGrkWM52BN3fFuynW7ZOH9Zge0+YF3p816qOrasiH5Ps/OWfVPkeNECq382DG2kmabz7eKu/mF8b/V5stivqJ494EJc26DFQb5/k2CFmy2DVJnxfJp+q+PUCQaJDlljhUx4TywLNlQujNo78D0I2QeacnmvPbihGhF9jYqpaCpMqESi+RlInnnI1KZjmQHqoRQPWePnGq" StartModuleName="Main" DocumentationTableOrder="ByExecutionOrder" EditedBy="A\axelb" LastEdited="2026-04-20T14:32:42.8381750Z" ComplexityLevel="Beginner" Signature="0x0rWZzHO4kD8WglhzO9NM8EJobDDUC+nIQh5An3AKo=">
+  <Modules>
+    <Module Name="Main" AutoRun="true" SelectedGroupName="Group 1">
+      <Groups>
+        <Group Name="Group 1">
+          <Tables>
+            <Table Name="DimCoberturaPago.dset" Left="179" Top="235" Width="500" Height="300" IsMinimized="true" ActiveActionIndex="0" ViewMode="Table">
+              <Actions>
+                <ImportDatasetAction AutoStatus="true" Mode="Local" ImportMode="Data" LoadAllColumns="true">
+                  <InputFileDefinition Mode="Single">
+                    <FileName Value="C:\Users\axelb\OneDrive\Escritorio\ProyectoBI\ProyectoBI\Dimensiones\DimCoberturaPago.dset" Type="Path" />
+                  </InputFileDefinition>
+                </ImportDatasetAction>
+              </Actions>
+              <AnalysisView Version="2" AppVersion="5.9.8.17" LayoutMode="Filters" />
+            </Table>
+            <Table Name="DimEspecialidad.dset" Left="220" Top="107" Width="500" Height="300" IsMinimized="true" ActiveActionIndex="0" ViewMode="Table">
+              <Actions>
+                <ImportDatasetAction AutoStatus="true" Mode="Local" ImportMode="Data" LoadAllColumns="true">
+                  <InputFileDefinition Mode="Single">
+                    <FileName Value="C:\Users\axelb\OneDrive\Escritorio\ProyectoBI\ProyectoBI\Dimensiones\DimEspecialidad.dset" Type="Path" />
+                  </InputFileDefinition>
+                </ImportDatasetAction>
+              </Actions>
+              <AnalysisView Version="2" AppVersion="5.9.8.17" LayoutMode="Filters" />
+            </Table>
+            <Table Name="DimEstadoCita.dset" Left="103" Top="134" Width="500" Height="300" IsMinimized="true" ActiveActionIndex="0" ViewMode="Table">
+              <Actions>
+                <ImportDatasetAction AutoStatus="true" Mode="Local" ImportMode="Data" LoadAllColumns="true">
+                  <InputFileDefinition Mode="Single">
+                    <FileName Value="C:\Users\axelb\OneDrive\Escritorio\ProyectoBI\ProyectoBI\Dimensiones\DimEstadoCita.dset" Type="Path" />
+                  </InputFileDefinition>
+                </ImportDatasetAction>
+              </Actions>
+              <AnalysisView Version="2" AppVersion="5.9.8.17" LayoutMode="Filters" />
+            </Table>
+            <Table Name="DimMedico.dset" Left="233" Top="214" Width="500" Height="300" IsMinimized="true" ActiveActionIndex="0" ViewMode="Table">
+              <Actions>
+                <ImportDatasetAction AutoStatus="true" Mode="Local" ImportMode="Data" LoadAllColumns="true">
+                  <InputFileDefinition Mode="Single">
+                    <FileName Value="C:\Users\axelb\OneDrive\Escritorio\ProyectoBI\ProyectoBI\Dimensiones\DimMedico.dset" Type="Path" />
+                  </InputFileDefinition>
+                </ImportDatasetAction>
+              </Actions>
+              <AnalysisView Version="2" AppVersion="5.9.8.17" LayoutMode="Filters" />
+            </Table>
+            <Table Name="DimPaciente.dset" Left="310" Top="98" Width="500" Height="300" IsMinimized="true" ActiveActionIndex="0" ViewMode="Table">
+              <Actions>
+                <ImportDatasetAction AutoStatus="true" Mode="Local" ImportMode="Data" LoadAllColumns="true">
+                  <InputFileDefinition Mode="Single">
+                    <FileName Value="C:\Users\axelb\OneDrive\Escritorio\ProyectoBI\ProyectoBI\Dimensiones\DimPaciente.dset" Type="Path" />
+                  </InputFileDefinition>
+                </ImportDatasetAction>
+              </Actions>
+              <AnalysisView Version="2" AppVersion="5.9.8.17" LayoutMode="Filters" />
+            </Table>
+            <Table Name="DimSede.dset" Left="0" Top="289" Width="500" Height="300" IsMinimized="true" ActiveActionIndex="0" ViewMode="Table">
+              <Actions>
+                <ImportDatasetAction AutoStatus="true" Mode="Local" ImportMode="Data" LoadAllColumns="true">
+                  <InputFileDefinition Mode="Single">
+                    <FileName Value="C:\Users\axelb\OneDrive\Escritorio\ProyectoBI\ProyectoBI\Dimensiones\DimSede.dset" Type="Path" />
+                  </InputFileDefinition>
+                </ImportDatasetAction>
+              </Actions>
+              <AnalysisView Version="2" AppVersion="5.9.8.17" LayoutMode="Filters" />
+            </Table>
+            <Table Name="DimServicio.dset" Left="138" Top="83" Width="500" Height="300" IsMinimized="true" ActiveActionIndex="0" ViewMode="Table">
+              <Actions>
+                <ImportDatasetAction AutoStatus="true" Mode="Local" ImportMode="Data" LoadAllColumns="true">
+                  <InputFileDefinition Mode="Single">
+                    <FileName Value="C:\Users\axelb\OneDrive\Escritorio\ProyectoBI\ProyectoBI\Dimensiones\DimServicio.dset" Type="Path" />
+                  </InputFileDefinition>
+                </ImportDatasetAction>
+              </Actions>
+              <AnalysisView Version="2" AppVersion="5.9.8.17" LayoutMode="Filters" />
+            </Table>
+            <Table Name="DimTiempo.dset" Left="208" Top="180" Width="500" Height="300" IsMinimized="true" ActiveActionIndex="0" ViewMode="Table">
+              <Actions>
+                <ImportDatasetAction AutoStatus="true" Mode="Local" ImportMode="Data" LoadAllColumns="true">
+                  <MetaColumns>
+                    <MetaColumn OriginalName="fecha" />
+                  </MetaColumns>
+                  <InputFileDefinition Mode="Single">
+                    <FileName Value="C:\Users\axelb\OneDrive\Escritorio\ProyectoBI\ProyectoBI\Dimensiones\DimTiempo.dset" Type="Path" />
+                  </InputFileDefinition>
+                </ImportDatasetAction>
+              </Actions>
+              <AnalysisView Version="2" AppVersion="5.9.8.17" LayoutMode="Filters" />
+            </Table>
+            <Table Name="stg_integrado_analitico.dset" Left="111" Top="515" Width="631" Height="289" IsMinimized="false" ActiveActionIndex="11" ViewMode="Table">
+              <Actions>
+                <ImportDatasetAction AutoStatus="true" Mode="Local" ImportMode="Data" LoadAllColumns="true">
+                  <MetaColumns>
+                    <MetaColumn OriginalName="fecha" />
+                  </MetaColumns>
+                  <InputFileDefinition Mode="Single">
+                    <FileName Value="C:\Users\axelb\OneDrive\Escritorio\ProyectoBI\ProyectoBI\Integracion_Analitica\stg_integrado_analitico.dset" Type="Path" />
+                  </InputFileDefinition>
+                </ImportDatasetAction>
+                <AddColumnsAction ColumnExistsOption="Rename">
+                  <Columns>
+                    <NameExpressionPair Name="cantidadFila">
+                      <Expression Value="1" Type="Expression" />
+                    </NameExpressionPair>
+                    <NameExpressionPair Name="cantidadCita">
+                      <Expression Value="1" Type="Expression" />
+                    </NameExpressionPair>
+                    <NameExpressionPair Name="cantidadProcedimiento">
+                      <Expression Value="1" Type="Expression" />
+                    </NameExpressionPair>
+                    <NameExpressionPair Name="cantidadServicio">
+                      <Expression Value="1" Type="Expression" />
+                    </NameExpressionPair>
+                    <NameExpressionPair Name="costoEstimado">
+                      <Expression Value="[costo_referencia]" Type="Expression" />
+                    </NameExpressionPair>
+                    <NameExpressionPair Name="montoFacturado">
+                      <Expression Value="[total]" Type="Expression" />
+                    </NameExpressionPair>
+                    <NameExpressionPair Name="margenEstimado">
+                      <Expression Value="[montoFacturado] - [costoEstimado]" Type="Expression" />
+                    </NameExpressionPair>
+                    <NameExpressionPair Name="esAtendida">
+                      <Expression Value="if([id_estado]= 1, 1, 0)" Type="Expression" />
+                    </NameExpressionPair>
+                    <NameExpressionPair Name="esCancelada">
+                      <Expression Value="if([id_estado]= 2, 1, 0)" Type="Expression" />
+                    </NameExpressionPair>
+                    <NameExpressionPair Name="esReprogramada">
+                      <Expression Value="if([id_estado]= 3, 1, 0)" Type="Expression" />
+                    </NameExpressionPair>
+                    <NameExpressionPair Name="esNoShow">
+                      <Expression Value="if([id_estado]= 4, 1, 0)" Type="Expression" />
+                    </NameExpressionPair>
+                  </Columns>
+                  <InsertPosition Position="Rightmost" />
+                </AddColumnsAction>
+                <LookupAction LookupTableName="DimCoberturaPago.dset" SecondTableExists="true" ColumnName="id_forma_pago" LookupColumnName="id_forma_pago" ReturnColumnName="idDimCoberturaPago" CreateNewColumn="true" ValueNotFoundOption="KeepOriginal" />
+                <LookupAction LookupTableName="DimEspecialidad.dset" SecondTableExists="true" ColumnName="id_especialidad" LookupColumnName="id_especialidad" ReturnColumnName="idDimEspecialidad" CreateNewColumn="true" ValueNotFoundOption="KeepOriginal" />
+                <LookupAction LookupTableName="DimEstadoCita.dset" SecondTableExists="true" ColumnName="id_estado" LookupColumnName="id_estado" ReturnColumnName="idDimEstadoCita" CreateNewColumn="true" ValueNotFoundOption="KeepOriginal" />
+                <LookupAction LookupTableName="DimMedico.dset" SecondTableExists="true" ColumnName="id_medico" LookupColumnName="id_medico" ReturnColumnName="idDimMedico" CreateNewColumn="true" ValueNotFoundOption="KeepOriginal" />
+                <LookupAction LookupTableName="DimPaciente.dset" SecondTableExists="true" ColumnName="id_paciente" LookupColumnName="id_paciente" ReturnColumnName="idDimPaciente" CreateNewColumn="true" ValueNotFoundOption="KeepOriginal" />
+                <LookupAction LookupTableName="DimSede.dset" SecondTableExists="true" ColumnName="id_sede" LookupColumnName="id_sede" ReturnColumnName="idDimSede" CreateNewColumn="true" ValueNotFoundOption="KeepOriginal" />
+                <LookupAction LookupTableName="DimServicio.dset" SecondTableExists="true" ColumnName="id_servicio" LookupColumnName="id_servicio" ReturnColumnName="idDimServicio" CreateNewColumn="true" ValueNotFoundOption="KeepOriginal" />
+                <LookupAction LookupTableName="DimTiempo.dset" SecondTableExists="true" ColumnName="id_franja" LookupColumnName="franja" ReturnColumnName="idDimTiempo" CreateNewColumn="true" ValueNotFoundOption="KeepOriginal" />
+                <KeepRemoveColumnsAction Mode="Keep">
+                  <ColumnNames>
+                    <Item>id_detalle_factura</Item>
+                    <Item>id_factura</Item>
+                    <Item>id_cita</Item>
+                    <Item>cantidadFila</Item>
+                    <Item>cantidadCita</Item>
+                    <Item>cantidadProcedimiento</Item>
+                    <Item>cantidadServicio</Item>
+                    <Item>costoEstimado</Item>
+                    <Item>montoFacturado</Item>
+                    <Item>margenEstimado</Item>
+                    <Item>esAtendida</Item>
+                    <Item>esCancelada</Item>
+                    <Item>esReprogramada</Item>
+                    <Item>esNoShow</Item>
+                    <Item>idDimCoberturaPago</Item>
+                    <Item>idDimEspecialidad</Item>
+                    <Item>idDimEstadoCita</Item>
+                    <Item>idDimMedico</Item>
+                    <Item>idDimPaciente</Item>
+                    <Item>idDimSede</Item>
+                    <Item>idDimServicio</Item>
+                    <Item>idDimTiempo</Item>
+                  </ColumnNames>
+                </KeepRemoveColumnsAction>
+                <ExportDatasetAction AutoStatus="true" Mode="Local" FileExistsOption="Overwrite" EncryptColumns="false" AppendMode="AddNewColumns" ExportMode="CreateOrOverwrite">
+                  <FileName Value="C:\Users\axelb\OneDrive\Escritorio\ProyectoBI\ProyectoBI\FactAtencionClinica\FactAtencionClinica.dset" Type="Path" />
+                </ExportDatasetAction>
+              </Actions>
+              <AnalysisView Version="2" AppVersion="5.9.8.17" LayoutMode="Filters" />
+            </Table>
+          </Tables>
+        </Group>
+      </Groups>
+      <Parameters />
+      <Report UseCustomFileNameForPdfExport="false" ShowPageBorders="true">
+        <Pages>
+          <Page Name="Page 1" IncludeInReport="true">
+            <ReportObjects />
+          </Page>
+        </Pages>
+        <PageSetup Orientation="Landscape" Margin="Narrow" Size="Letter" />
+      </Report>
+    </Module>
+  </Modules>
+  <ProtectedDataConnectors />
+  <Resources />
+</Project>

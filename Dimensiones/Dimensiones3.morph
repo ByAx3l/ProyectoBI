@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Version="29" AppVersion="5.9.8.17" ReadKey="readkey.gWgX2+MJmeU=.y5nwTS5xC7ZU2beStaYZ1A==.gNqTuqI2yZKsB/ownv7D5at0wuDXXqFPciJYBrM/pCBfd3ojyCrAg+Sagd01jgfjn9jbiPLcxCyIpvGayIejdUxr37dsCiMm0zeLKkJTDok=.hxYedIhlLt98Lj4naJTVW1UI0EWcACC8M1SAitDuCYQ=." WriteKeyPublic="BgIAAACkAABSU0ExAAgAAAEAAQAx7/eyLd4LfVHJNZh3d/3jGo+qaA+xq+CocKPvVyovJ/2P+puoXK1k58YQ2RWtvrG6EZbhou6a/ffZ+BaVXKy3kxpJkWA1uObAcKWpY2y672QtldyLf4zjzkHvrBPQhNcI4YtEib82d5J+9kymFcJgU0vErNks1Fjjm7dliw1Gca4CtAS913iVK5T+6NrXoUod3DzMOs78kXH56q7wSRO5SJw00ShAEbwRnQippHsWVpYAAAq3dt19HskmSOzUUWvke4AMv1DgZMa3VoF7umtFjgA1OzH1gNZo0HH7pY7JB6uqlKnlQSZaPoujf1hOcuCIWdmwEvwXTddpDi5BMBa7" StartModuleName="Main" DocumentationTableOrder="ByExecutionOrder" EditedBy="A\axelb" LastEdited="2026-04-20T13:47:17.8507102Z" ComplexityLevel="Beginner" Signature="c8XKukawY5xZJ24Z0Q0XlAYo2u2Uti7h9je9uMEJ3pg=">
+  <Modules>
+    <Module Name="Main" AutoRun="true" SelectedGroupName="Group 1">
+      <Groups>
+        <Group Name="Group 1">
+          <Tables>
+            <Table Name="DimCoberturaPago" Left="787" Top="42" Width="500" Height="292" IsMinimized="false" ActiveActionIndex="7" ViewMode="Table">
+              <Actions>
+                <DeriveTableAction SourceTableName="stg_integrado_analitico.dset" IsConditional="false" />
+                <MergeAction SecondTableName="stg_forma_pago_raw.dset" SecondTableExists="true" MergeMode="Lookup">
+                  <Columns>
+                    <Item>descripcion</Item>
+                  </Columns>
+                  <MatchingColumns>
+                    <NamePair Name1="id_forma_pago" Name2="id_forma_pago" />
+                  </MatchingColumns>
+                </MergeAction>
+                <MergeAction SecondTableName="stg_aseguradora_raw.dset" SecondTableExists="true" MergeMode="Lookup">
+                  <Columns>
+                    <Item>nombre</Item>
+                    <Item>tipo_cobertura</Item>
+                    <Item>origen</Item>
+                  </Columns>
+                  <MatchingColumns>
+                    <NamePair Name1="id_aseguradora" Name2="id_aseguradora" />
+                  </MatchingColumns>
+                </MergeAction>
+                <KeepRemoveColumnsAction Mode="Keep">
+                  <ColumnNames>
+                    <Item>id_aseguradora</Item>
+                    <Item>id_forma_pago</Item>
+                    <Item>descripcion</Item>
+                    <Item>nombre(2)</Item>
+                    <Item>tipo_cobertura</Item>
+                    <Item>origen</Item>
+                  </ColumnNames>
+                </KeepRemoveColumnsAction>
+                <RemoveEmptyRowsAction Mode="EmptyOrWhitespace" RemoveTop="true" RemoveBetweenFirstAndLastNonEmpty="true" RemoveBottom="true">
+                  <IgnoreColumnNames />
+                </RemoveEmptyRowsAction>
+                <EnumerateRowsAction EnumerateInGroups="false" Repeat="false" />
+                <RenameColumnsAction>
+                  <Names>
+                    <NamePair Name1="RowNo" Name2="idDimCoberturaPago" />
+                    <NamePair Name1="nombre(2)" Name2="nombre" />
+                  </Names>
+                </RenameColumnsAction>
+                <ExportDatasetAction AutoStatus="true" Mode="Local" FileExistsOption="Overwrite" EncryptColumns="false" AppendMode="AddNewColumns" ExportMode="CreateOrOverwrite">
+                  <FileName Value="DimCoberturaPago" Type="Path" />
+                </ExportDatasetAction>
+              </Actions>
+              <AnalysisView Version="2" AppVersion="5.9.8.17" LayoutMode="Filters" />
+            </Table>
+            <Table Name="DimServicio" Left="729" Top="433" Width="500" Height="291" IsMinimized="false" ActiveActionIndex="6" ViewMode="Table">
+              <Actions>
+                <DeriveTableAction SourceTableName="stg_integrado_analitico.dset" IsConditional="false" />
+                <MergeAction SecondTableName="stg_servicio_raw.dset" SecondTableExists="true" MergeMode="LeftJoin">
+                  <Columns>
+                    <Item>nombre</Item>
+                  </Columns>
+                  <MatchingColumns>
+                    <NamePair Name1="id_servicio" Name2="id_servicio" />
+                  </MatchingColumns>
+                </MergeAction>
+                <KeepRemoveColumnsAction Mode="Keep">
+                  <ColumnNames>
+                    <Item>id_servicio</Item>
+                    <Item>id_tipo_servicio</Item>
+                    <Item>tarifa_referencia</Item>
+                    <Item>costo_referencia</Item>
+                    <Item>nombre(2)</Item>
+                  </ColumnNames>
+                </KeepRemoveColumnsAction>
+                <RemoveEmptyRowsAction Mode="EmptyOrWhitespace" RemoveTop="true" RemoveBetweenFirstAndLastNonEmpty="true" RemoveBottom="true">
+                  <IgnoreColumnNames />
+                </RemoveEmptyRowsAction>
+                <EnumerateRowsAction EnumerateInGroups="false" Repeat="false" />
+                <RenameColumnsAction>
+                  <Names>
+                    <NamePair Name1="RowNo" Name2="idDimServicio" />
+                    <NamePair Name1="nombre(2)" Name2="nombre" />
+                  </Names>
+                </RenameColumnsAction>
+                <ExportDatasetAction AutoStatus="true" Mode="Local" FileExistsOption="Overwrite" EncryptColumns="false" AppendMode="AddNewColumns" ExportMode="CreateOrOverwrite">
+                  <FileName Value="DimServicio" Type="Path" />
+                </ExportDatasetAction>
+              </Actions>
+              <AnalysisView Version="2" AppVersion="5.9.8.17" LayoutMode="Filters" />
+            </Table>
+            <Table Name="stg_aseguradora_raw.dset" Left="30" Top="88" Width="500" Height="300" IsMinimized="true" ActiveActionIndex="0" ViewMode="Table">
+              <Actions>
+                <ImportDatasetAction AutoStatus="true" Mode="Local" ImportMode="Data" LoadAllColumns="true">
+                  <InputFileDefinition Mode="Single">
+                    <FileName Value="C:\Users\axelb\OneDrive\Escritorio\ProyectoBI\ProyectoBI\Raw\stg_aseguradora_raw.dset" Type="Path" />
+                  </InputFileDefinition>
+                </ImportDatasetAction>
+              </Actions>
+              <AnalysisView Version="2" AppVersion="5.9.8.17" LayoutMode="Filters" />
+            </Table>
+            <Table Name="stg_forma_pago_raw.dset" Left="33" Top="7" Width="500" Height="300" IsMinimized="true" ActiveActionIndex="0" ViewMode="Table">
+              <Actions>
+                <ImportDatasetAction AutoStatus="true" Mode="Local" ImportMode="Data" LoadAllColumns="true">
+                  <InputFileDefinition Mode="Single">
+                    <FileName Value="C:\Users\axelb\OneDrive\Escritorio\ProyectoBI\ProyectoBI\Raw\stg_forma_pago_raw.dset" Type="Path" />
+                  </InputFileDefinition>
+                </ImportDatasetAction>
+              </Actions>
+              <AnalysisView Version="2" AppVersion="5.9.8.17" LayoutMode="Filters" />
+            </Table>
+            <Table Name="stg_integrado_analitico.dset" Left="38" Top="293" Width="500" Height="300" IsMinimized="true" ActiveActionIndex="0" ViewMode="Table">
+              <Actions>
+                <ImportDatasetAction AutoStatus="true" Mode="Local" ImportMode="Data" LoadAllColumns="true">
+                  <MetaColumns>
+                    <MetaColumn OriginalName="fecha" />
+                  </MetaColumns>
+                  <InputFileDefinition Mode="Single">
+                    <FileName Value="C:\Users\axelb\OneDrive\Escritorio\ProyectoBI\ProyectoBI\Integracion_Analitica\stg_integrado_analitico.dset" Type="Path" />
+                  </InputFileDefinition>
+                </ImportDatasetAction>
+              </Actions>
+              <AnalysisView Version="2" AppVersion="5.9.8.17" LayoutMode="Filters" />
+            </Table>
+            <Table Name="stg_servicio_raw.dset" Left="97" Top="522" Width="500" Height="300" IsMinimized="false" ActiveActionIndex="0" ViewMode="Table">
+              <Actions>
+                <ImportDatasetAction AutoStatus="true" Mode="Local" ImportMode="Data" LoadAllColumns="true">
+                  <InputFileDefinition Mode="Single">
+                    <FileName Value="C:\Users\axelb\OneDrive\Escritorio\ProyectoBI\ProyectoBI\Raw\stg_servicio_raw.dset" Type="Path" />
+                  </InputFileDefinition>
+                </ImportDatasetAction>
+              </Actions>
+              <AnalysisView Version="2" AppVersion="5.9.8.17" LayoutMode="Filters" />
+            </Table>
+          </Tables>
+        </Group>
+      </Groups>
+      <Parameters />
+      <Report UseCustomFileNameForPdfExport="false" ShowPageBorders="true">
+        <Pages>
+          <Page Name="Page 1" IncludeInReport="true">
+            <ReportObjects />
+          </Page>
+        </Pages>
+        <PageSetup Orientation="Landscape" Margin="Narrow" Size="Letter" />
+      </Report>
+    </Module>
+  </Modules>
+  <ProtectedDataConnectors />
+  <Resources />
+</Project>

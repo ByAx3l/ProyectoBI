@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Version="29" AppVersion="5.9.8.17" ReadKey="readkey.AqYI5tP8KRE=.sIc/kWoNV5ngpe52YF7FMw==.EuGZ4Ri6DCRNFYmzU0ShUjzNp6HmuXm2RGfajA/S3L0buIRjPTFkSZUq/xR3SMDZc39TEJdohofDD/Y23SlZ7pPIlxQQBoT9ZlZNuoWW6R4=.t7OJnWqn2xumEo9ObDmJTt7TQaCESRkyTLib+jD4ZqI=." WriteKeyPublic="BgIAAACkAABSU0ExAAgAAAEAAQAZnh1fJDb6cWkYCySAdx7TqchJQssibtU66yzNjVTbAMLUhCquJGyxD60HA0uAreGQptnJi9/GvkOnagGZGHLnjCmIC8Els5GjqRg2WNviPD4UVkGyKPGAo9F+LiR6S1otF0NtboKzvEeF1H0HqKUveCOFzT3CplVnpjvejAt19DUT9SAZaMjKm46YUXOgsZ3wTZFcOSiGgc99Oa+LPSvP6rl8ByJ6MBHt24pHlFYB0elm57Oh+6zC2cd47tFNKSpgUOaMdNWT616n0wEBIrhAfXtrOfGiIYbWdm+moLkch3EJUlZnz6mOfGkoJ26RFvaOw2rxSc6g5ZAP8nCNBleX" StartModuleName="Main" DocumentationTableOrder="ByExecutionOrder" EditedBy="A\axelb" LastEdited="2026-04-20T13:01:51.2469215Z" ComplexityLevel="Beginner" Signature="MWx+QtU9ZoOj0Su3aS0OLrXGXpV/IFDbrTGtHzrNhFA=">
+  <Modules>
+    <Module Name="Main" AutoRun="true" SelectedGroupName="Group 1">
+      <Groups>
+        <Group Name="Group 1">
+          <Tables>
+            <Table Name="DimEstadoCita" Left="781" Top="477" Width="500" Height="291" IsMinimized="false" ActiveActionIndex="4" ViewMode="Table">
+              <Actions>
+                <DeriveTableAction SourceTableName="stg_integrado_analitico.dset" IsConditional="false" />
+                <MergeAction SecondTableName="stg_estado_cita_raw.dset" SecondTableExists="true" MergeMode="LeftJoin">
+                  <Columns>
+                    <Item>descripcion</Item>
+                  </Columns>
+                  <MatchingColumns>
+                    <NamePair Name1="id_estado" Name2="id_estado" />
+                  </MatchingColumns>
+                </MergeAction>
+                <KeepRemoveColumnsAction Mode="Keep">
+                  <ColumnNames>
+                    <Item>id_estado</Item>
+                    <Item>descripcion</Item>
+                  </ColumnNames>
+                </KeepRemoveColumnsAction>
+                <EnumerateRowsAction EnumerateInGroups="false" Repeat="false" />
+                <RenameColumnsAction>
+                  <Names>
+                    <NamePair Name1="RowNo" Name2="idDimEstadoCita" />
+                  </Names>
+                </RenameColumnsAction>
+                <ExportDatasetAction AutoStatus="true" Mode="Local" FileExistsOption="Overwrite" EncryptColumns="false" AppendMode="AddNewColumns" ExportMode="CreateOrOverwrite">
+                  <FileName Value="DimEstadoCita" Type="Path" />
+                </ExportDatasetAction>
+              </Actions>
+              <AnalysisView Version="2" AppVersion="5.9.8.17" LayoutMode="Filters" />
+            </Table>
+            <Table Name="DimTiempo" Left="911" Top="35" Width="500" Height="292" IsMinimized="false" ActiveActionIndex="5" ViewMode="Table">
+              <Actions>
+                <DeriveTableAction SourceTableName="stg_integrado_analitico.dset" IsConditional="false" />
+                <MakeDateTimeColumnsAction ColumnName="fecha" FormattedDate="false" Format="" Year="true" Quarter="false" YearQuarter="false" Month="true" MonthDisplayType="Local" YearMonth="false" YearMonthDisplayType="English" Day="true" Weekday="true" WeekdayDisplayType="Local" DayOfYear="false" IsoWeekNumber="false" MonthStart="false" MonthEnd="false" WeekStart="false" WeekEnd="false" WeekStartDay="Sunday" Hour12="false" Hour24="false" AmPm="false" Minutes="false" Seconds="false" Milliseconds="false" />
+                <KeepRemoveColumnsAction Mode="Keep">
+                  <ColumnNames>
+                    <Item>fecha</Item>
+                    <Item>hora_programada</Item>
+                    <Item>id_franja</Item>
+                    <Item>Year</Item>
+                    <Item>Month</Item>
+                    <Item>Day</Item>
+                    <Item>Week day</Item>
+                  </ColumnNames>
+                </KeepRemoveColumnsAction>
+                <EnumerateRowsAction EnumerateInGroups="false" Repeat="false" />
+                <RenameColumnsAction>
+                  <Names>
+                    <NamePair Name1="RowNo" Name2="idDimTiempo" />
+                    <NamePair Name1="id_franja" Name2="franja" />
+                  </Names>
+                </RenameColumnsAction>
+                <ExportDatasetAction AutoStatus="true" Mode="Local" FileExistsOption="Overwrite" EncryptColumns="false" AppendMode="AddNewColumns" ExportMode="CreateOrOverwrite">
+                  <FileName Value="DimTiempo" Type="Path" />
+                </ExportDatasetAction>
+              </Actions>
+              <AnalysisView Version="2" AppVersion="5.9.8.17" LayoutMode="Filters" />
+            </Table>
+            <Table Name="stg_estado_cita_raw.dset" Left="3" Top="640" Width="500" Height="300" IsMinimized="true" ActiveActionIndex="0" ViewMode="Table">
+              <Actions>
+                <ImportDatasetAction AutoStatus="true" Mode="Local" ImportMode="Data" LoadAllColumns="true">
+                  <InputFileDefinition Mode="Single">
+                    <FileName Value="C:\Users\axelb\OneDrive\Escritorio\ProyectoBI\ProyectoBI\Raw\stg_estado_cita_raw.dset" Type="Path" />
+                  </InputFileDefinition>
+                </ImportDatasetAction>
+              </Actions>
+              <AnalysisView Version="2" AppVersion="5.9.8.17" LayoutMode="Filters" />
+            </Table>
+            <Table Name="stg_integrado_analitico.dset" Left="38" Top="293" Width="500" Height="300" IsMinimized="true" ActiveActionIndex="0" ViewMode="Table">
+              <Actions>
+                <ImportDatasetAction AutoStatus="true" Mode="Local" ImportMode="Data" LoadAllColumns="true">
+                  <MetaColumns>
+                    <MetaColumn OriginalName="fecha" />
+                  </MetaColumns>
+                  <InputFileDefinition Mode="Single">
+                    <FileName Value="C:\Users\axelb\OneDrive\Escritorio\ProyectoBI\ProyectoBI\Integracion_Analitica\stg_integrado_analitico.dset" Type="Path" />
+                  </InputFileDefinition>
+                </ImportDatasetAction>
+              </Actions>
+              <AnalysisView Version="2" AppVersion="5.9.8.17" LayoutMode="Filters" />
+            </Table>
+          </Tables>
+        </Group>
+      </Groups>
+      <Parameters />
+      <Report UseCustomFileNameForPdfExport="false" ShowPageBorders="true">
+        <Pages>
+          <Page Name="Page 1" IncludeInReport="true">
+            <ReportObjects />
+          </Page>
+        </Pages>
+        <PageSetup Orientation="Landscape" Margin="Narrow" Size="Letter" />
+      </Report>
+    </Module>
+  </Modules>
+  <ProtectedDataConnectors />
+  <Resources />
+</Project>

@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Version="29" AppVersion="5.9.8.17" ReadKey="readkey.sffQfjzYf6w=.cPccATInXTjiE4ky49nvkg==.CNwK6btzfSHGgcH3h1ExFN5WziHcZ08leNwpKr1tCcJRD/oDI31jg5Uh8ioipBNcgeNhNck8OhJLjgbnDJy+JK07DFmv8+S/FUWRLj3HeVk=.VMP4Pb5RJpvwjMxiitEX3qt7he2N+SaFpAVUDM4nQLw=." WriteKeyPublic="BgIAAACkAABSU0ExAAgAAAEAAQDtlYBoOuoeaV089eJlGTI6DYgTc0+s+qnpSNLqpGvMn0GeDQZDy1SmBisH7eQqfMBQR7rpTguNxfCQYDcx0RocIFbrCoxrwky1db95BrHA2MheENf8JqoaQHb1J5GDeSzxyGI0hkZCD3GcRLxqlWRxcF1HuL8vMOym0v/M4nijCiqCzKy0le/1mlTSksGZ2M7RFsNjgihyXpDkiN6nCwIT/JoRFYM7+Fpjk13HVTkmRHrMoytapRa3PVppkx1UwMtrGKdAZ1xj7YJt/v+okqNBiUyPfBZzi2hpVRc5wJEwB317Jkiv7S75tDENrrVEcZ6LjlgTXNLat8PUBDT6cY7B" StartModuleName="Main" DocumentationTableOrder="ByExecutionOrder" EditedBy="A\axelb" LastEdited="2026-04-20T13:45:58.1322213Z" ComplexityLevel="Beginner" Signature="4TBfTkGG+kRD1EeR/YQ4MvE/+QM0Z3jwiPZPSLw1l44=">
+  <Modules>
+    <Module Name="Main" AutoRun="true" SelectedGroupName="Group 1">
+      <Groups>
+        <Group Name="Group 1">
+          <Tables>
+            <Table Name="DimPaciente" Left="787" Top="42" Width="500" Height="326" IsMinimized="false" ActiveActionIndex="6" ViewMode="Table">
+              <Actions>
+                <DeriveTableAction SourceTableName="stg_integrado_analitico.dset" IsConditional="false" />
+                <MergeAction SecondTableName="stg_paciente_raw.dset" SecondTableExists="true" MergeMode="FullJoin">
+                  <Columns>
+                    <Item>edad</Item>
+                    <Item>sexo</Item>
+                    <Item>id_tipo_cliente</Item>
+                  </Columns>
+                  <MatchingColumns>
+                    <NamePair Name1="id_paciente" Name2="id_paciente" />
+                  </MatchingColumns>
+                </MergeAction>
+                <MergeAction SecondTableName="stg_tipo_cliente_raw.dset" SecondTableExists="true" MergeMode="FullJoin">
+                  <Columns>
+                    <Item>descripcion</Item>
+                  </Columns>
+                  <MatchingColumns>
+                    <NamePair Name1="id_tipo_cliente" Name2="id_tipo_cliente" />
+                  </MatchingColumns>
+                </MergeAction>
+                <KeepRemoveColumnsAction Mode="Keep">
+                  <ColumnNames>
+                    <Item>id_paciente</Item>
+                    <Item>edad</Item>
+                    <Item>sexo</Item>
+                    <Item>id_tipo_cliente</Item>
+                    <Item>descripcion</Item>
+                  </ColumnNames>
+                </KeepRemoveColumnsAction>
+                <RemoveEmptyRowsAction Mode="EmptyOrWhitespace" RemoveTop="true" RemoveBetweenFirstAndLastNonEmpty="true" RemoveBottom="true">
+                  <IgnoreColumnNames />
+                </RemoveEmptyRowsAction>
+                <EnumerateRowsAction EnumerateInGroups="false" Repeat="false" />
+                <RenameColumnsAction>
+                  <Names>
+                    <NamePair Name1="RowNo" Name2="idDimPaciente" />
+                  </Names>
+                </RenameColumnsAction>
+                <ExportDatasetAction AutoStatus="true" Mode="Local" FileExistsOption="Overwrite" EncryptColumns="false" AppendMode="AddNewColumns" ExportMode="CreateOrOverwrite">
+                  <FileName Value="DimPaciente" Type="Path" />
+                </ExportDatasetAction>
+              </Actions>
+              <AnalysisView Version="2" AppVersion="5.9.8.17" LayoutMode="Filters" />
+            </Table>
+            <Table Name="DimSede" Left="729" Top="433" Width="500" Height="409" IsMinimized="false" ActiveActionIndex="6" ViewMode="Table">
+              <Actions>
+                <DeriveTableAction SourceTableName="stg_integrado_analitico.dset" IsConditional="false" />
+                <MergeAction SecondTableName="stg_sede_raw.dset" SecondTableExists="true" MergeMode="LeftJoin">
+                  <Columns>
+                    <Item>nombre</Item>
+                    <Item>provincia</Item>
+                    <Item>region</Item>
+                    <Item>tipo_sede</Item>
+                  </Columns>
+                  <MatchingColumns>
+                    <NamePair Name1="id_sede" Name2="id_sede" />
+                  </MatchingColumns>
+                </MergeAction>
+                <KeepRemoveColumnsAction Mode="Keep">
+                  <ColumnNames>
+                    <Item>id_sede</Item>
+                    <Item>nombre(2)</Item>
+                    <Item>provincia</Item>
+                    <Item>region</Item>
+                    <Item>tipo_sede</Item>
+                  </ColumnNames>
+                </KeepRemoveColumnsAction>
+                <RemoveEmptyRowsAction Mode="EmptyOrWhitespace" RemoveTop="true" RemoveBetweenFirstAndLastNonEmpty="true" RemoveBottom="true">
+                  <IgnoreColumnNames />
+                </RemoveEmptyRowsAction>
+                <EnumerateRowsAction EnumerateInGroups="false" Repeat="false" />
+                <RenameColumnsAction>
+                  <Names>
+                    <NamePair Name1="RowNo" Name2="idDimSede" />
+                    <NamePair Name1="nombre(2)" Name2="nombre" />
+                  </Names>
+                </RenameColumnsAction>
+                <ExportDatasetAction AutoStatus="true" Mode="Local" FileExistsOption="Overwrite" EncryptColumns="false" AppendMode="AddNewColumns" ExportMode="CreateOrOverwrite">
+                  <FileName Value="DimSede" Type="Path" />
+                </ExportDatasetAction>
+              </Actions>
+              <AnalysisView Version="2" AppVersion="5.9.8.17" LayoutMode="Filters" />
+            </Table>
+            <Table Name="stg_integrado_analitico.dset" Left="38" Top="293" Width="500" Height="300" IsMinimized="false" ActiveActionIndex="0" ViewMode="Table">
+              <Actions>
+                <ImportDatasetAction AutoStatus="true" Mode="Local" ImportMode="Data" LoadAllColumns="true">
+                  <MetaColumns>
+                    <MetaColumn OriginalName="fecha" />
+                  </MetaColumns>
+                  <InputFileDefinition Mode="Single">
+                    <FileName Value="C:\Users\axelb\OneDrive\Escritorio\ProyectoBI\ProyectoBI\Integracion_Analitica\stg_integrado_analitico.dset" Type="Path" />
+                  </InputFileDefinition>
+                </ImportDatasetAction>
+              </Actions>
+              <AnalysisView Version="2" AppVersion="5.9.8.17" LayoutMode="Filters" />
+            </Table>
+            <Table Name="stg_paciente_raw.dset" Left="113" Top="21" Width="498" Height="300" IsMinimized="false" ActiveActionIndex="0" ViewMode="Table">
+              <Actions>
+                <ImportDatasetAction AutoStatus="true" Mode="Local" ImportMode="Data" LoadAllColumns="true">
+                  <InputFileDefinition Mode="Single">
+                    <FileName Value="C:\Users\axelb\OneDrive\Escritorio\ProyectoBI\ProyectoBI\Raw\stg_paciente_raw.dset" Type="Path" />
+                  </InputFileDefinition>
+                </ImportDatasetAction>
+              </Actions>
+              <AnalysisView Version="2" AppVersion="5.9.8.17" LayoutMode="Filters" />
+            </Table>
+            <Table Name="stg_sede_raw.dset" Left="117" Top="136" Width="500" Height="300" IsMinimized="true" ActiveActionIndex="0" ViewMode="Table">
+              <Actions>
+                <ImportDatasetAction AutoStatus="true" Mode="Local" ImportMode="Data" LoadAllColumns="true">
+                  <InputFileDefinition Mode="Single">
+                    <FileName Value="C:\Users\axelb\OneDrive\Escritorio\ProyectoBI\ProyectoBI\Raw\stg_sede_raw.dset" Type="Path" />
+                  </InputFileDefinition>
+                </ImportDatasetAction>
+              </Actions>
+              <AnalysisView Version="2" AppVersion="5.9.8.17" LayoutMode="Filters" />
+            </Table>
+            <Table Name="stg_tipo_cliente_raw.dset" Left="70" Top="390" Width="500" Height="300" IsMinimized="true" ActiveActionIndex="0" ViewMode="Table">
+              <Actions>
+                <ImportDatasetAction AutoStatus="true" Mode="Local" ImportMode="Data" LoadAllColumns="true">
+                  <InputFileDefinition Mode="Single">
+                    <FileName Value="C:\Users\axelb\OneDrive\Escritorio\ProyectoBI\ProyectoBI\Raw\stg_tipo_cliente_raw.dset" Type="Path" />
+                  </InputFileDefinition>
+                </ImportDatasetAction>
+              </Actions>
+              <AnalysisView Version="2" AppVersion="5.9.8.17" LayoutMode="Filters" />
+            </Table>
+          </Tables>
+        </Group>
+      </Groups>
+      <Parameters />
+      <Report UseCustomFileNameForPdfExport="false" ShowPageBorders="true">
+        <Pages>
+          <Page Name="Page 1" IncludeInReport="true">
+            <ReportObjects />
+          </Page>
+        </Pages>
+        <PageSetup Orientation="Landscape" Margin="Narrow" Size="Letter" />
+      </Report>
+    </Module>
+  </Modules>
+  <ProtectedDataConnectors />
+  <Resources />
+</Project>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project Version="29" AppVersion="5.9.8.17" ReadKey="readkey.DWyEv4wrkwo=.DzKa/4cvE/H9u6PvKFbxfg==.48UpJ8bZfSJJ0putysBrhsXgn/5EcB+vnwTQCgv1qX1sg9TLPqkgjyPwhpdf6s1/W3i9+K0DmAEcG/bDkalg1oGALrhEYxCkdvcHdai9kqY=.oOBjh9j9PVtvgyOrth84YcorKgD6c0v/Ono7xx4l79k=." WriteKeyPublic="BgIAAACkAABSU0ExAAgAAAEAAQB5kQwcdvMjdfN7mzu7LkEQFqI+m2YHIjWRT62vH5Zw+JHQ0bJBk6R6Znk3wTOEeZYvr/nH9cEzx18OMv2bGM4BK/P/clYGFvi0NtTtnaLNFLEFp008gEBaCuZcy6t6A1QTuKf4mdSnK/uYgBrI6Vzo4LiSZ4WGf22j2lmsHqwv/Z+5IMahVflyNSrzEXTkH1gqPHkqcQFapQlfrY4n4O6K7278OKxTuZ1eXDNNl7sbiLBAMDJ43FTeLj6lko3tUZKKupvjmp4KKyVFp8H0P4pEA4Do1RcK++9uzG5FdZAx3YtqP4HCYkDNfZZ1xFrDJro0WGYuC21QqxL+c8HS0xTs" StartModuleName="Main" DocumentationTableOrder="ByExecutionOrder" EditedBy="A\axelb" LastEdited="2026-04-20T04:19:23.8757967Z" ComplexityLevel="Beginner" Signature="NtybleIKemEA+govuf1Yp/jfD/uUU3DnR/wznXWax2c=">
+<Project Version="29" AppVersion="5.9.8.17" ReadKey="readkey.3iXPDjfUmrA=.1ytJT92/1OFRyVh8Z3BghA==.Nhsk4CLsriV7vHfnnRyyM5h08NTpSUFdlwHSmqwT5ie1IsFM+rZxuqVegL2NkGe6D0g9VeUXnitIWbNVr7hOKi0792AErShc+qOpq4uhr6I=.87f29/JwZ9LvlvvseZVeMpta7F9FpnpxmFM9MYfiFcM=." WriteKeyPublic="BgIAAACkAABSU0ExAAgAAAEAAQCpq+ZMkjE6ktzaQ8nnBN4Ej3wWSkz15tjE58ZjMdRV55LMC7PP45ebW1mHFeKDGe1dIWwM21ZsHUj9bBKpG+J3h/U2CctydLdPKxTKUh/7SvROF8sfLOZg2jHaTU1+fIF1uK1Odgu8dURLNIVRonSAykzMRv5nKydMX9EVd0quu67okwu5LqxJALfAvswKSnA2j7FNbdTlV5/gkGuRVSTWJ+WhMBE37BvEo5P2uAXeddec/OZ0G+aoI9hiskLI6jdbmspdeyDVzxgBh/xEgZf9iRkHa7i7QWS9wfvdYH8TmbwAmhdV+W0M0ghqKVGpXhHn27l+sn4zq3FHSUQuNb+2" StartModuleName="Main" DocumentationTableOrder="ByExecutionOrder" EditedBy="A\axelb" LastEdited="2026-04-20T13:17:21.5606859Z" ComplexityLevel="Beginner" Signature="LGgzRYejCRdLFkwvDClGF/JZdEL6HQG+Z3o/GakGeaw=">
   <Modules>
     <Module Name="Main" AutoRun="true" SelectedGroupName="Group 1">
       <Groups>
@@ -21,6 +21,12 @@
                       <Expressions />
                       <WhereConditionTree />
                       <HavingConditionTree />
+                      <KnownDataTypes>
+                        <Item Name="id_paciente" IsExpression="false" DataType="Number" />
+                        <Item Name="edad" IsExpression="false" DataType="Number" />
+                        <Item Name="sexo" IsExpression="false" DataType="Text" />
+                        <Item Name="id_tipo_cliente" IsExpression="false" DataType="Number" />
+                      </KnownDataTypes>
                     </QueryModel>
                     <Parameters />
                   </Query>
@@ -35,7 +41,7 @@
               <Actions>
                 <ImportSqlAction QueryLocationType="VisualEditor">
                   <MetaColumns>
-                    <MetaColumn OriginalName="fecha" Format="DateDDMMMYYYY" FormatOrigin="Autodetected" />
+                    <MetaColumn OriginalName="fecha" />
                   </MetaColumns>
                   <Query Version="7" AppVersion="5.9.8.17" QueryType="QueryBuilder" UseEmbeddedParameters="false" WindowWidth="1070" WindowHeight="600" QueryBuilderObjectsAreaWidth="255" QueryBuilderFiltersAreaHeight="250">
                     <DataConnectorDefinition IsShared="true" Type="List" Name="ProyectoBI" />
@@ -56,6 +62,18 @@
                       <Expressions />
                       <WhereConditionTree />
                       <HavingConditionTree />
+                      <KnownDataTypes>
+                        <Item Name="id_procedimiento" IsExpression="false" DataType="Number" />
+                        <Item Name="fecha" IsExpression="false" DataType="Date" />
+                        <Item Name="id_cita" IsExpression="false" DataType="Number" />
+                        <Item Name="id_paciente" IsExpression="false" DataType="Number" />
+                        <Item Name="id_medico" IsExpression="false" DataType="Number" />
+                        <Item Name="id_sede" IsExpression="false" DataType="Number" />
+                        <Item Name="id_servicio" IsExpression="false" DataType="Number" />
+                        <Item Name="id_aseguradora" IsExpression="false" DataType="Number" />
+                        <Item Name="cantidad" IsExpression="false" DataType="Number" />
+                        <Item Name="observaciones" IsExpression="false" DataType="Text" />
+                      </KnownDataTypes>
                     </QueryModel>
                     <Parameters />
                   </Query>
@@ -83,12 +101,19 @@
                       <Expressions />
                       <WhereConditionTree />
                       <HavingConditionTree />
+                      <KnownDataTypes>
+                        <Item Name="id_sede" IsExpression="false" DataType="Number" />
+                        <Item Name="nombre" IsExpression="false" DataType="Text" />
+                        <Item Name="provincia" IsExpression="false" DataType="Text" />
+                        <Item Name="region" IsExpression="false" DataType="Text" />
+                        <Item Name="tipo_sede" IsExpression="false" DataType="Text" />
+                      </KnownDataTypes>
                     </QueryModel>
                     <Parameters />
                   </Query>
                 </ImportSqlAction>
                 <ExportDatasetAction AutoStatus="true" Mode="Local" FileExistsOption="Overwrite" EncryptColumns="false" AppendMode="AddNewColumns" ExportMode="CreateOrOverwrite">
-                  <FileName Value="sede" Type="Path" />
+                  <FileName Value="stg_sede_raw" Type="Path" />
                 </ExportDatasetAction>
               </Actions>
               <AnalysisView Version="2" AppVersion="5.9.8.17" LayoutMode="Filters" />
@@ -112,6 +137,15 @@
                       <Expressions />
                       <WhereConditionTree />
                       <HavingConditionTree />
+                      <KnownDataTypes>
+                        <Item Name="id_servicio" IsExpression="false" DataType="Number" />
+                        <Item Name="nombre" IsExpression="false" DataType="Text" />
+                        <Item Name="id_tipo_servicio" IsExpression="false" DataType="Number" />
+                        <Item Name="id_especialidad" IsExpression="false" DataType="Number" />
+                        <Item Name="tarifa_referencia" IsExpression="false" DataType="Number" />
+                        <Item Name="costo_referencia" IsExpression="false" DataType="Number" />
+                        <Item Name="activo" IsExpression="false" DataType="Boolean" />
+                      </KnownDataTypes>
                     </QueryModel>
                     <Parameters />
                   </Query>
@@ -136,11 +170,15 @@
                       <Expressions />
                       <WhereConditionTree />
                       <HavingConditionTree />
+                      <KnownDataTypes>
+                        <Item Name="id_tipo_cliente" IsExpression="false" DataType="Number" />
+                        <Item Name="descripcion" IsExpression="false" DataType="Text" />
+                      </KnownDataTypes>
                     </QueryModel>
                     <Parameters />
                   </Query>
                 </ImportSqlAction>
-                <ExportDatasetAction AutoStatus="true" Mode="Local" FileExistsOption="HaltProjectExecution" EncryptColumns="false" AppendMode="AddNewColumns" ExportMode="CreateOrOverwrite">
+                <ExportDatasetAction AutoStatus="true" Mode="Local" FileExistsOption="Overwrite" EncryptColumns="false" AppendMode="AddNewColumns" ExportMode="CreateOrOverwrite">
                   <FileName Value="stg_tipo_cliente_raw" Type="Path" />
                 </ExportDatasetAction>
               </Actions>
@@ -160,6 +198,10 @@
                       <Expressions />
                       <WhereConditionTree />
                       <HavingConditionTree />
+                      <KnownDataTypes>
+                        <Item Name="id_tipo_servicio" IsExpression="false" DataType="Number" />
+                        <Item Name="descripcion" IsExpression="false" DataType="Text" />
+                      </KnownDataTypes>
                     </QueryModel>
                     <Parameters />
                   </Query>
