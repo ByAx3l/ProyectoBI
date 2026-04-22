@@ -63,6 +63,8 @@ ProyectoBI/
 ├── Integracion_Analitica/ Datos integrados y transformados para el modelo analítico
 ├── Dimensiones/ Construccion de tablas dimensionales con datos finales
 ├── FactAtencionClinica/ Datos correspondientes a la tabla de hechos principal del modelo
-└── README.md Documento principal
+├── Etapas de Staging y Diseno del Flujo ETL/ Documentación y construcción del flujo ETL y del proceso de staging
+├── Modelo Dimensional Medicare.pdf/ Documento con el diseño del modelo dimensional (esquema estrella)
+└── Reglas generales de transformacion.docx/ Documento que define las reglas de negocio y transformación de datos
 
 (Cada carpeta concerniente al ETL tiene tanto sus .morph con el proceso como sus respectivos .dset como resultados de dicha ejecucion.
